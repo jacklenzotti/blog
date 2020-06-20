@@ -16,7 +16,7 @@ export default function Layout({
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href = {process.env.BACKEND_URL + "/favicon.ico"} />
         <meta
           name="description"
           content="Jack Lenzotti Tech Ramblings"
@@ -42,7 +42,7 @@ export default function Layout({
           </>
         ) : (
           <>
-            <Link href="/">
+            <Link href={ process.env.BACKEND_URL + "/" }>
               <a>
                 <img
                   src="/images/profile.jpg"
@@ -52,7 +52,7 @@ export default function Layout({
               </a>
             </Link>
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
+              <Link href={ process.env.BACKEND_URL + "/"}>
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
@@ -62,7 +62,7 @@ export default function Layout({
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">
+          <Link href={process.env.BACKEND_URL + "/"}>
             <a>← Back to home</a>
           </Link>
         </div>
