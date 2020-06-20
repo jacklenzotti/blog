@@ -6,7 +6,11 @@ module.exports = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/" }
+      "/": { page: "/" },
+      "/posts/pre-rendering": {
+            page: "/posts/[id]",
+            query: { id: "pre-rendering" }
+      }
     }
   },
   //assetPrefix: '',
