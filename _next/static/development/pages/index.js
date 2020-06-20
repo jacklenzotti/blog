@@ -106,28 +106,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
 /* harmony import */ var _footer_module_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./footer.module.css */ "./components/footer.module.css");
 /* harmony import */ var _footer_module_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_footer_module_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
-/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
-/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../styles/utils.module.css */ "./styles/utils.module.css");
+/* harmony import */ var _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fortawesome/react-fontawesome */ "./node_modules/@fortawesome/react-fontawesome/index.es.js");
+/* harmony import */ var _fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fortawesome/fontawesome-svg-core */ "./node_modules/@fortawesome/fontawesome-svg-core/index.es.js");
+/* harmony import */ var _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/free-brands-svg-icons */ "./node_modules/@fortawesome/free-brands-svg-icons/index.es.js");
 var _jsxFileName = "/Users/jack/Projects/blog/app/components/footer.tsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1__["createElement"];
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2__["createElement"];
 
 
 
 
-_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_3__["config"].autoAddCss = false; // needed to prevent flashing of icons
+
+_fortawesome_fontawesome_svg_core__WEBPACK_IMPORTED_MODULE_4__["config"].autoAddCss = false; // needed to prevent flashing of icons
 
 
 function Footer() {
   return __jsx("div", {
-    className: _footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.footerContainer,
+    className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.footerContainer, " ").concat(_styles_utils_module_css__WEBPACK_IMPORTED_MODULE_1___default.a.extraLightText),
     __self: this,
     __source: {
       fileName: _jsxFileName,
       lineNumber: 16,
       columnNumber: 7
+    }
+  }, __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17,
+      columnNumber: 9
     }
   }, __jsx("a", {
     target: "_blank",
@@ -136,16 +146,16 @@ function Footer() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17,
-      columnNumber: 13
+      lineNumber: 18,
+      columnNumber: 11
     }
-  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faLinkedin"],
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faLinkedin"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18,
-      columnNumber: 17
+      lineNumber: 19,
+      columnNumber: 15
     }
   })), __jsx("a", {
     target: "_blank",
@@ -154,16 +164,16 @@ function Footer() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 13
+      lineNumber: 21,
+      columnNumber: 11
     }
-  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faGithubSquare"],
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faGithubSquare"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 17
+      lineNumber: 22,
+      columnNumber: 15
     }
   })), __jsx("a", {
     target: "_blank",
@@ -172,18 +182,34 @@ function Footer() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 13
+      lineNumber: 24,
+      columnNumber: 11
     }
-  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_2__["FontAwesomeIcon"], {
-    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_4__["faSpotify"],
+  }, __jsx(_fortawesome_react_fontawesome__WEBPACK_IMPORTED_MODULE_3__["FontAwesomeIcon"], {
+    icon: _fortawesome_free_brands_svg_icons__WEBPACK_IMPORTED_MODULE_5__["faSpotify"],
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 17
+      lineNumber: 25,
+      columnNumber: 15
     }
-  })));
+  }))), __jsx("span", {
+    className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.builtWith),
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 9
+    }
+  }, "Built with ", __jsx("span", {
+    className: _footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.love,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 22
+    }
+  }, "\u2764"), " using NextJS, React & TypeScript"));
 }
 
 /***/ }),
@@ -6962,11 +6988,13 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".footer_footerContainer__1MMkz {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.footer_social__16bpp {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.footer_social__16bpp:hover {\n    transform: translateY(-4px);\n  }\n", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/components/footer.module.css"],"names":[],"mappings":"AAAA;IACI,eAAe;IACf,iBAAiB;IACjB,kBAAkB;EACpB;;EAEA;IACE,eAAe;IACf,2BAA2B;IAC3B,qBAAqB;IACrB,cAAc;EAChB;;EAEA;IACE,2BAA2B;EAC7B","file":"footer.module.css","sourcesContent":[".footerContainer {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.social {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.social:hover {\n    transform: translateY(-4px);\n  }\n"]}]);
+exports.push([module.i, ".footer_footerContainer__1MMkz {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.footer_social__16bpp {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.footer_social__16bpp:hover {\n    transform: translateY(-4px);\n  }\n\n  .footer_builtWith__2uPgW {\n    font-size: .5em;\n  }\n\n  .footer_love__3j7lw {\n    color:red;\n  }\n", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/components/footer.module.css"],"names":[],"mappings":"AAAA;IACI,eAAe;IACf,iBAAiB;IACjB,kBAAkB;EACpB;;EAEA;IACE,eAAe;IACf,2BAA2B;IAC3B,qBAAqB;IACrB,cAAc;EAChB;;EAEA;IACE,2BAA2B;EAC7B;;EAEA;IACE,eAAe;EACjB;;EAEA;IACE,SAAS;EACX","file":"footer.module.css","sourcesContent":[".footerContainer {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.social {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.social:hover {\n    transform: translateY(-4px);\n  }\n\n  .builtWith {\n    font-size: .5em;\n  }\n\n  .love {\n    color:red;\n  }\n"]}]);
 // Exports
 exports.locals = {
 	"footerContainer": "footer_footerContainer__1MMkz",
-	"social": "footer_social__16bpp"
+	"social": "footer_social__16bpp",
+	"builtWith": "footer_builtWith__2uPgW",
+	"love": "footer_love__3j7lw"
 };
 
 /***/ }),
@@ -7001,7 +7029,7 @@ exports.locals = {
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".utils_heading2Xl__1I65m {\n  font-size: 2.5rem;\n  line-height: 1.2;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.utils_headingXl__1XecN {\n  font-size: 2rem;\n  line-height: 1.3;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.utils_headingLg__de7p0 {\n  font-size: 1.5rem;\n  line-height: 1.4;\n  margin: 1rem 0;\n}\n\n.utils_headingMd__3de6G {\n  font-size: 1.2rem;\n  line-height: 1.5;\n}\n\n.utils_borderCircle__13qdJ {\n  border-radius: 9999px;\n}\n\n.utils_borderProfileImg___1Z5B {\n  border: 3px solid black;\n  border-radius: 9999px;\n}\n\n.utils_colorInherit__3Gudf {\n  color: inherit;\n}\n\n.utils_padding1px__oCny8 {\n  padding-top: 1px;\n}\n\n.utils_list__S7_pe {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.utils_listItem__2eJpJ {\n  margin: 0 0 1.25rem;\n}\n\n.utils_lightText__12Ckm {\n  color: #666;\n}\n\n.utils_noWrap__21Dsx {\n  white-space: nowrap;\n}\n\n.utils_textAlignCenter__1WvoL {\n  text-align: center;\n}", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/styles/utils.module.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,gBAAgB;EAChB,wBAAwB;EACxB,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,wBAAwB;EACxB,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,UAAU;EACV,SAAS;AACX;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;AACpB","file":"utils.module.css","sourcesContent":[".heading2Xl {\n  font-size: 2.5rem;\n  line-height: 1.2;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.headingXl {\n  font-size: 2rem;\n  line-height: 1.3;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.headingLg {\n  font-size: 1.5rem;\n  line-height: 1.4;\n  margin: 1rem 0;\n}\n\n.headingMd {\n  font-size: 1.2rem;\n  line-height: 1.5;\n}\n\n.borderCircle {\n  border-radius: 9999px;\n}\n\n.borderProfileImg {\n  border: 3px solid black;\n  border-radius: 9999px;\n}\n\n.colorInherit {\n  color: inherit;\n}\n\n.padding1px {\n  padding-top: 1px;\n}\n\n.list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.listItem {\n  margin: 0 0 1.25rem;\n}\n\n.lightText {\n  color: #666;\n}\n\n.noWrap {\n  white-space: nowrap;\n}\n\n.textAlignCenter {\n  text-align: center;\n}"]}]);
+exports.push([module.i, ".utils_heading2Xl__1I65m {\n  font-size: 2.5rem;\n  line-height: 1.2;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.utils_headingXl__1XecN {\n  font-size: 2rem;\n  line-height: 1.3;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.utils_headingLg__de7p0 {\n  font-size: 1.5rem;\n  line-height: 1.4;\n  margin: 1rem 0;\n}\n\n.utils_headingMd__3de6G {\n  font-size: 1.2rem;\n  line-height: 1.5;\n}\n\n.utils_borderCircle__13qdJ {\n  border-radius: 9999px;\n}\n\n.utils_borderProfileImg___1Z5B {\n  border: 3px solid black;\n  border-radius: 9999px;\n}\n\n.utils_colorInherit__3Gudf {\n  color: inherit;\n}\n\n.utils_padding1px__oCny8 {\n  padding-top: 1px;\n}\n\n.utils_list__S7_pe {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.utils_listItem__2eJpJ {\n  margin: 0 0 1.25rem;\n}\n\n.utils_lightText__12Ckm {\n  color: #666;\n}\n\n.utils_extraLightText__1yZo8 {\n  color: #D3D3D3;\n}\n\n.utils_noWrap__21Dsx {\n  white-space: nowrap;\n}\n\n.utils_textAlignCenter__1WvoL {\n  text-align: center;\n}", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/styles/utils.module.css"],"names":[],"mappings":"AAAA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,gBAAgB;EAChB,wBAAwB;EACxB,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,eAAe;EACf,gBAAgB;EAChB,gBAAgB;EAChB,wBAAwB;EACxB,cAAc;EACd,kBAAkB;AACpB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;EAChB,cAAc;AAChB;;AAEA;EACE,iBAAiB;EACjB,gBAAgB;AAClB;;AAEA;EACE,qBAAqB;AACvB;;AAEA;EACE,uBAAuB;EACvB,qBAAqB;AACvB;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,gBAAgB;AAClB;;AAEA;EACE,gBAAgB;EAChB,UAAU;EACV,SAAS;AACX;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,WAAW;AACb;;AAEA;EACE,cAAc;AAChB;;AAEA;EACE,mBAAmB;AACrB;;AAEA;EACE,kBAAkB;AACpB","file":"utils.module.css","sourcesContent":[".heading2Xl {\n  font-size: 2.5rem;\n  line-height: 1.2;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.headingXl {\n  font-size: 2rem;\n  line-height: 1.3;\n  font-weight: 800;\n  letter-spacing: -0.05rem;\n  margin: 1rem 0;\n  text-align: center;\n}\n\n.headingLg {\n  font-size: 1.5rem;\n  line-height: 1.4;\n  margin: 1rem 0;\n}\n\n.headingMd {\n  font-size: 1.2rem;\n  line-height: 1.5;\n}\n\n.borderCircle {\n  border-radius: 9999px;\n}\n\n.borderProfileImg {\n  border: 3px solid black;\n  border-radius: 9999px;\n}\n\n.colorInherit {\n  color: inherit;\n}\n\n.padding1px {\n  padding-top: 1px;\n}\n\n.list {\n  list-style: none;\n  padding: 0;\n  margin: 0;\n}\n\n.listItem {\n  margin: 0 0 1.25rem;\n}\n\n.lightText {\n  color: #666;\n}\n\n.extraLightText {\n  color: #D3D3D3;\n}\n\n.noWrap {\n  white-space: nowrap;\n}\n\n.textAlignCenter {\n  text-align: center;\n}"]}]);
 // Exports
 exports.locals = {
 	"heading2Xl": "utils_heading2Xl__1I65m",
@@ -7015,6 +7043,7 @@ exports.locals = {
 	"list": "utils_list__S7_pe",
 	"listItem": "utils_listItem__2eJpJ",
 	"lightText": "utils_lightText__12Ckm",
+	"extraLightText": "utils_extraLightText__1yZo8",
 	"noWrap": "utils_noWrap__21Dsx",
 	"textAlignCenter": "utils_textAlignCenter__1WvoL"
 };
@@ -29683,7 +29712,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjack%2FProjects%2Fblog%2Fapp%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************/
@@ -29706,5 +29735,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
