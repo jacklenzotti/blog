@@ -14,3 +14,11 @@
   a.social:hover {
     transform: translateY(-4px);
   }
+
+  .builtWith {
+    font-size: .5em;
+  }
+
+  .love {
+    color:red;
+  }

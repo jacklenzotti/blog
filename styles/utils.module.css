@@ -58,6 +58,10 @@
   color: #666;
 }
 
+.extraLightText {
+  color: #D3D3D3;
+}
+
 .noWrap {
   white-space: nowrap;
 }
