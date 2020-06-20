@@ -13,7 +13,6 @@ module.exports = {
       }
     }
   },
-  //assetPrefix: '',
   assetPrefix: !debug ? '/blog/' : '',
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
