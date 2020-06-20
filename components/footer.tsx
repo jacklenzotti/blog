@@ -14,13 +14,13 @@ import {
 export default function Footer() {
     return (
       <div className={styles.footerContainer}>
-            <a href="https://www.linkedin.com/in/jack-l-641496106/" className={`${styles.social} fa-2x`}>
+            <a target="_blank" href="https://www.linkedin.com/in/jack-l-641496106/" className={`${styles.social} fa-2x`}>
                 <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href="https://github.com/jacklenzotti" className={`${styles.social} fa-2x`}>
+            <a target="_blank" href="https://github.com/jacklenzotti" className={`${styles.social} fa-2x`}>
                 <FontAwesomeIcon icon={faGithubSquare} />
             </a>
-            <a href="https://open.spotify.com/user/jack_benett_?si=wQLNF0-cRm-88aJNup-mGA" className={`${styles.social} fa-2x`}>
+            <a target="_blank" href="https://open.spotify.com/user/jack_benett_?si=wQLNF0-cRm-88aJNup-mGA" className={`${styles.social} fa-2x`}>
                 <FontAwesomeIcon icon={faSpotify} />
             </a>
       </div>
