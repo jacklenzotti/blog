@@ -5,5 +5,3 @@ describe('Posts',() => {
         expect(getSortedPostsData().length).toBeGreaterThan(0);
     })
 })
-
-export {}
