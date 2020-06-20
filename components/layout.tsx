@@ -34,7 +34,7 @@ export default function Layout({
         {home ? (
           <>
             <img
-              src="/images/profile.jpg"
+              src={process.env.BACKEND_URL + "/images/profile.jpg"}
               className={`${styles.headerHomeImage} ${utilStyles.borderProfileImg}`}
               alt={name}
             />
@@ -45,7 +45,7 @@ export default function Layout({
             <Link href={ process.env.BACKEND_URL + "/" }>
               <a>
                 <img
-                  src="/images/profile.jpg"
+                  src={process.env.BACKEND_URL + "/images/profile.jpg"}
                   className={`${styles.headerImage} ${utilStyles.borderProfileImg}`}
                   alt={name}
                 />

@@ -28,13 +28,13 @@ export default function Home({
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href="/posts/[id]" as={ process.env.BACKEND_URL + `/posts/${id}`}>
+              <Link href={ process.env.BACKEND_URL + "/posts/[id]" } as={`${process.env.BACKEND_URL}/posts/${id}`}>
                 <a>{title}</a>
-              </Link>
+              </Link> 
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
-              </small>
+              </small>  
             </li>
           ))}
         </ul>
