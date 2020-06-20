@@ -130,6 +130,7 @@ function Footer() {
       columnNumber: 7
     }
   }, __jsx("a", {
+    target: "_blank",
     href: "https://www.linkedin.com/in/jack-l-641496106/",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -147,6 +148,7 @@ function Footer() {
       columnNumber: 17
     }
   })), __jsx("a", {
+    target: "_blank",
     href: "https://github.com/jacklenzotti",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -164,6 +166,7 @@ function Footer() {
       columnNumber: 17
     }
   })), __jsx("a", {
+    target: "_blank",
     href: "https://open.spotify.com/user/jack_benett_?si=wQLNF0-cRm-88aJNup-mGA",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -29680,7 +29683,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjack%2FProjects%2Fblog%2Fapp%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************/
@@ -29703,5 +29706,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
