@@ -2,6 +2,7 @@ import Head from 'next/head'
 import styles from './layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
+import Footer from './footer'
 
 const name = 'Jack Benett Lenzotti'
 export const siteTitle = 'Jack Lenzotti - Blog'
@@ -67,6 +68,7 @@ export default function Layout({
           </Link>
         </div>
       )}
+      <Footer></Footer>
     </div>
   )
 }

@@ -1,0 +1,15 @@
+.footerContainer {
+    margin-top: 3em;
+    padding: 5px 10px;
+    text-align: center;
+  }
+
+  a.social {
+    margin: 0 .5rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+
+  a.social:hover {
+    transform: translateY(-2px);
+  }

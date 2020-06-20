@@ -11,6 +11,10 @@
     "deploy": "rm -rf node_modules/.cache && rm -rf node_modules/gh-pages/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.29",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "date-fns": "^2.11.1",
     "gray-matter": "^4.0.2",
     "next": "9.3.5",
