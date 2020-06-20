@@ -23344,7 +23344,7 @@ function Home(_ref) {
       }
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
       href: "/posts/[id]",
-      as: "/posts/".concat(id),
+      as: "" + "/posts/".concat(id),
       __self: _this,
       __source: {
         fileName: _jsxFileName,
@@ -23448,7 +23448,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjack%2FProjects%2Fblog%2Fapp%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************/
@@ -23471,5 +23471,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
