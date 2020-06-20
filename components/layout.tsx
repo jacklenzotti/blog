@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Footer from './footer'
 
 const name = 'Jack Benett Lenzotti'
-export const siteTitle = 'Jack Lenzotti - Blog'
+export const siteTitle = 'Jack Lenzotti - Home'
 
 export default function Layout({
   children,

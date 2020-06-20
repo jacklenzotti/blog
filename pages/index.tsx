@@ -20,11 +20,11 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>Full stack web developer interested in building cool stuff for the world to use.  Currently in Cleveland, Ohio.</p>
+      <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
+        <p>Full stack web developer building cool stuff for the <span className={utilStyles.noWrap}>world to use 💻🛠</span></p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
+        <h2 className={utilStyles.headingLg}>Recent Blog Posts</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>

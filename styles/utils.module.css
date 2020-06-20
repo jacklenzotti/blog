@@ -4,6 +4,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .headingXl {
@@ -12,6 +13,7 @@
   font-weight: 800;
   letter-spacing: -0.05rem;
   margin: 1rem 0;
+  text-align: center;
 }
 
 .headingLg {
@@ -54,4 +56,12 @@
 
 .lightText {
   color: #666;
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.textAlignCenter {
+  text-align: center;
 }
