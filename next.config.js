@@ -6,11 +6,7 @@ module.exports = {
     { dev, dir, outDir, distDir, buildId }
   ) {
     return {
-      "/": { page: "/" },
-      "/posts/pre-rendering": {
-            page: "/posts/[slug]",
-            query: { slug: "pre-rendering" }
-      }
+      "/": { page: "/" }
     }
   },
   //assetPrefix: '',
