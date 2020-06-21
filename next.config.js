@@ -1,6 +1,7 @@
+const withPWA = require('next-pwa')
 const debug = process.env.NODE_ENV !== "production";
 
-module.exports = {
+module.exports = withPWA({
   exportPathMap: async function () {
     return {
       "/": { page: "/" },
@@ -11,6 +12,9 @@ module.exports = {
     }
   },
   assetPrefix: !debug ? '/blog/' : '',
+  pwa: {
+    dest: 'public'
+  },
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config
     // console.log('webpack');
@@ -31,4 +35,4 @@ module.exports = {
     // Important: return the modified config
     return config
   }, */
-}
+})

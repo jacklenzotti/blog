@@ -28,8 +28,18 @@ export default function Layout({
             siteTitle
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
+        <title>Jack Lenzotti - Blog</title>
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta httpEquiv='X-UA-Compatible' content='IE=edge' />
+        <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5,user-scalable=yes' />
+        <meta name='description' content='Jack Lenzotti - Blog' />
+        <meta name='keywords' content='Jack Lenzotti Tech Blog' />
+        <link rel='manifest' href='/manifest.json' />
+        <link href='/favicon-16x16.png' rel='icon' type='image/png' sizes='16x16' />
+        <link href='/favicon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
+        <link rel='apple-touch-icon' href='/apple-icon.png'></link>
+        <meta name='theme-color' content='#ffffff' />
       </Head>
       <header className={styles.header}>
         {home ? (
