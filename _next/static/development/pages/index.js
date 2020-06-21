@@ -140,7 +140,8 @@ function Footer() {
       columnNumber: 9
     }
   }, __jsx("a", {
-    target: "_blank",
+    rel: "noopener",
+    "aria-label": "Linked-in profile",
     href: "https://www.linkedin.com/in/jack-l-641496106/",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -158,7 +159,8 @@ function Footer() {
       columnNumber: 15
     }
   })), __jsx("a", {
-    target: "_blank",
+    rel: "noopener",
+    "aria-label": "Github Profile",
     href: "https://github.com/jacklenzotti",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -176,7 +178,8 @@ function Footer() {
       columnNumber: 15
     }
   })), __jsx("a", {
-    target: "_blank",
+    rel: "noopener",
+    "aria-label": "Spotify profile",
     href: "https://open.spotify.com/user/jack_benett_?si=wQLNF0-cRm-88aJNup-mGA",
     className: "".concat(_footer_module_css__WEBPACK_IMPORTED_MODULE_0___default.a.social, " fa-2x"),
     __self: this,
@@ -352,13 +355,20 @@ function Layout(_ref) {
       lineNumber: 25,
       columnNumber: 9
     }
-  }), __jsx("meta", {
+  }), __jsx("title", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31,
+      columnNumber: 9
+    }
+  }, "Jack Lenzotti - Blog"), __jsx("meta", {
     name: "og:title",
     content: siteTitle,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 32,
       columnNumber: 9
     }
   }), __jsx("meta", {
@@ -367,7 +377,92 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 33,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    httpEquiv: "X-UA-Compatible",
+    content: "IE=edge",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "viewport",
+    content: "width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5,user-scalable=yes",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "description",
+    content: "Jack Lenzotti - Blog",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "keywords",
+    content: "Jack Lenzotti Tech Blog",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37,
+      columnNumber: 9
+    }
+  }), __jsx("link", {
+    rel: "manifest",
+    href: "/manifest.json",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38,
+      columnNumber: 9
+    }
+  }), __jsx("link", {
+    href: "/favicon-16x16.png",
+    rel: "icon",
+    type: "image/png",
+    sizes: "16x16",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39,
+      columnNumber: 9
+    }
+  }), __jsx("link", {
+    href: "/favicon-32x32.png",
+    rel: "icon",
+    type: "image/png",
+    sizes: "32x32",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40,
+      columnNumber: 9
+    }
+  }), __jsx("link", {
+    rel: "apple-touch-icon",
+    href: "/apple-icon.png",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 41,
+      columnNumber: 9
+    }
+  }), __jsx("meta", {
+    name: "theme-color",
+    content: "#ffffff",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42,
       columnNumber: 9
     }
   })), __jsx("header", {
@@ -375,7 +470,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34,
+      lineNumber: 44,
       columnNumber: 7
     }
   }, home ? __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("img", {
@@ -385,7 +480,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 47,
       columnNumber: 13
     }
   }), __jsx("h1", {
@@ -393,7 +488,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42,
+      lineNumber: 52,
       columnNumber: 13
     }
   }, name)) : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -401,14 +496,14 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 56,
       columnNumber: 13
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 57,
       columnNumber: 15
     }
   }, __jsx("img", {
@@ -418,7 +513,7 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 58,
       columnNumber: 17
     }
   }))), __jsx("h2", {
@@ -426,39 +521,8 @@ function Layout(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
-      columnNumber: 13
-    }
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
-    href: "/",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 56,
-      columnNumber: 15
-    }
-  }, __jsx("a", {
-    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.colorInherit,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 57,
-      columnNumber: 17
-    }
-  }, name))))), __jsx("main", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 63,
-      columnNumber: 7
-    }
-  }, children), !home && __jsx("div", {
-    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.backToHome,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 65,
-      columnNumber: 9
+      columnNumber: 13
     }
   }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
     href: "/",
@@ -466,20 +530,51 @@ function Layout(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 66,
+      columnNumber: 15
+    }
+  }, __jsx("a", {
+    className: _styles_utils_module_css__WEBPACK_IMPORTED_MODULE_3___default.a.colorInherit,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 67,
+      columnNumber: 17
+    }
+  }, name))))), __jsx("main", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 73,
+      columnNumber: 7
+    }
+  }, children), !home && __jsx("div", {
+    className: _layout_module_css__WEBPACK_IMPORTED_MODULE_2___default.a.backToHome,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75,
+      columnNumber: 9
+    }
+  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    href: "/",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 76,
       columnNumber: 11
     }
   }, __jsx("a", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67,
+      lineNumber: 77,
       columnNumber: 13
     }
-  }, "\u2190 Back to home"))), __jsx(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, "\u2190 Back to \uD83C\uDFE0"))), __jsx(_footer__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 71,
+      lineNumber: 81,
       columnNumber: 7
     }
   }));
@@ -6988,7 +7083,7 @@ var convertCurry = convert.bind(null, react__WEBPACK_IMPORTED_MODULE_2___default
 
 exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(true);
 // Module
-exports.push([module.i, ".footer_footerContainer__1MMkz {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.footer_social__16bpp {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.footer_social__16bpp:hover {\n    transform: translateY(-4px);\n  }\n\n  .footer_builtWith__2uPgW {\n    font-size: .5em;\n  }\n\n  .footer_love__3j7lw {\n    color:red;\n  }\n", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/components/footer.module.css"],"names":[],"mappings":"AAAA;IACI,eAAe;IACf,iBAAiB;IACjB,kBAAkB;EACpB;;EAEA;IACE,eAAe;IACf,2BAA2B;IAC3B,qBAAqB;IACrB,cAAc;EAChB;;EAEA;IACE,2BAA2B;EAC7B;;EAEA;IACE,eAAe;EACjB;;EAEA;IACE,SAAS;EACX","file":"footer.module.css","sourcesContent":[".footerContainer {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.social {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.social:hover {\n    transform: translateY(-4px);\n  }\n\n  .builtWith {\n    font-size: .5em;\n  }\n\n  .love {\n    color:red;\n  }\n"]}]);
+exports.push([module.i, ".footer_footerContainer__1MMkz {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.footer_social__16bpp {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.footer_social__16bpp:hover {\n    transform: translateY(-4px);\n  }\n\n  .footer_builtWith__2uPgW {\n    font-size: .5em;\n    color: black;\n  }\n\n  .footer_love__3j7lw {\n    color:red;\n  }\n", "",{"version":3,"sources":["/Users/jack/Projects/blog/app/components/footer.module.css"],"names":[],"mappings":"AAAA;IACI,eAAe;IACf,iBAAiB;IACjB,kBAAkB;EACpB;;EAEA;IACE,eAAe;IACf,2BAA2B;IAC3B,qBAAqB;IACrB,cAAc;EAChB;;EAEA;IACE,2BAA2B;EAC7B;;EAEA;IACE,eAAe;IACf,YAAY;EACd;;EAEA;IACE,SAAS;EACX","file":"footer.module.css","sourcesContent":[".footerContainer {\n    margin-top: 4em;\n    padding: 5px 10px;\n    text-align: center;\n  }\n\n  a.social {\n    margin: 0 .5rem;\n    transition: transform 300ms;\n    display: inline-block;\n    color: #D3D3D3;\n  }\n\n  a.social:hover {\n    transform: translateY(-4px);\n  }\n\n  .builtWith {\n    font-size: .5em;\n    color: black;\n  }\n\n  .love {\n    color:red;\n  }\n"]}]);
 // Exports
 exports.locals = {
 	"footerContainer": "footer_footerContainer__1MMkz",
@@ -29712,7 +29807,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 3:
 /*!****************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fjack%2FProjects%2Fblog%2Fapp%2Fpages%2Findex.tsx ***!
   \****************************************************************************************************************************/
@@ -29735,5 +29830,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[3,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

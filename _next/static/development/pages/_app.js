@@ -3518,14 +3518,19 @@ var _jsxFileName = "/Users/jack/Projects/blog/app/pages/_app.tsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
+
 function App(_ref) {
   var Component = _ref.Component,
       pageProps = _ref.pageProps;
+  var lang = "en";
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    document.documentElement.lang = lang;
+  }, [lang]);
   return __jsx(Component, Object(_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, pageProps, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 11,
       columnNumber: 10
     }
   }));
@@ -3594,7 +3599,7 @@ if (true) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 1:
 /*!********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F_app&absolutePagePath=private-next-pages%2F_app.tsx ./node_modules/next/dist/client/router.js ***!
   \********************************************************************************************************************************************/
@@ -3618,5 +3623,5 @@ module.exports = dll_2adc2403d89adc16ead0;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=_app.js.map
