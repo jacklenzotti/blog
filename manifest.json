@@ -4,8 +4,8 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "fullscreen",
-    "Scope": "https://jacklenzotti.github.io/blog",
-    "start_url": "https://jacklenzotti.github.io/blog",
+    "Scope": "https://jacklenzotti.github.io/blog/",
+    "start_url": "https://jacklenzotti.github.io/blog/",
     "icons": [
       {
         "src": "images/icons/icon-72x72.png",
