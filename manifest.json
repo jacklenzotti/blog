@@ -5,7 +5,7 @@
     "background_color": "#ffffff",
     "display": "fullscreen",
     "Scope": "https://jacklenzotti.github.io",
-    "start_url": "./blog",
+    "start_url": "/blog",
     "icons": [
       {
         "src": "images/icons/icon-72x72.png",
