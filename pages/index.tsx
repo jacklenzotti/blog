@@ -21,7 +21,7 @@ export default function Home({
         <title>{siteTitle}</title>
       </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.textAlignCenter}`}>
-        <p>Full stack web developer building cool stuff for the <span className={utilStyles.noWrap}>world to use 💻🛠</span></p>
+        <p>Full stack web developer building cool stuff for the <span className={utilStyles.noWrap}>world to use 🌎💻</span></p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Recent Blog Posts</h2>
