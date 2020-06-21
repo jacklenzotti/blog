@@ -29619,27 +29619,26 @@ function Home(_ref) {
   var _this = this;
 
   var allPostsData = _ref.allPostsData;
-  navigator.serviceWorker.register("/sw.js");
   return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_2__["default"], {
     home: true,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23,
+      lineNumber: 19,
       columnNumber: 5
     }
   }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24,
+      lineNumber: 20,
       columnNumber: 7
     }
   }, __jsx("title", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 25,
+      lineNumber: 21,
       columnNumber: 9
     }
   }, _components_layout__WEBPACK_IMPORTED_MODULE_2__["siteTitle"])), __jsx("section", {
@@ -29647,14 +29646,14 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 23,
       columnNumber: 7
     }
   }, __jsx("p", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 24,
       columnNumber: 9
     }
   }, "Full stack web developer building cool stuff for the ", __jsx("span", {
@@ -29662,7 +29661,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28,
+      lineNumber: 24,
       columnNumber: 65
     }
   }, "world to use \uD83C\uDF0E\uD83D\uDCBB"))), __jsx("section", {
@@ -29670,7 +29669,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 26,
       columnNumber: 7
     }
   }, __jsx("h2", {
@@ -29678,7 +29677,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 27,
       columnNumber: 9
     }
   }, "Recent Blog Posts"), __jsx("ul", {
@@ -29686,7 +29685,7 @@ function Home(_ref) {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32,
+      lineNumber: 28,
       columnNumber: 9
     }
   }, allPostsData.map(function (_ref2) {
@@ -29699,7 +29698,7 @@ function Home(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34,
+        lineNumber: 30,
         columnNumber: 13
       }
     }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -29708,21 +29707,21 @@ function Home(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35,
+        lineNumber: 31,
         columnNumber: 15
       }
     }, __jsx("a", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 36,
+        lineNumber: 32,
         columnNumber: 17
       }
     }, title)), __jsx("br", {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 38,
+        lineNumber: 34,
         columnNumber: 15
       }
     }), __jsx("small", {
@@ -29730,7 +29729,7 @@ function Home(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39,
+        lineNumber: 35,
         columnNumber: 15
       }
     }, __jsx(_components_date__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -29738,7 +29737,7 @@ function Home(_ref) {
       __self: _this,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 40,
+        lineNumber: 36,
         columnNumber: 17
       }
     })));
