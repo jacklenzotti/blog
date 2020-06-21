@@ -4,8 +4,8 @@
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "fullscreen",
-    "scope": "/blog",
-    "start_url": "/sw.js",
+    "scope": "/blog/",
+    "start_url": "/blog/",
     "icons": [
       {
         "src": "images/icons/icon-72x72.png",
