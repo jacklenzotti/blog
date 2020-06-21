@@ -13,7 +13,9 @@ module.exports = withPWA({
   },
   assetPrefix: !debug ? '/blog/' : '',
   pwa: {
-    dest: !debug ? '/blog/' : ''
+    dest: 'public',
+    disable: !debug ? false : true,
+    subdomainPrefix: !debug ? '/blog' : ''
   },
   webpack: (config, { dev }) => {
     // Perform customizations to webpack config

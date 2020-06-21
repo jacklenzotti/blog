@@ -88,5 +88,5 @@ out/
 .dynamodb/
 
 .DS_Store
-*public/sw.*
-*public/workbox*
+*sw.js*
+*workbox*
