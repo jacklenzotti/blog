@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -34,13 +32,13 @@ export default function Home() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <main className="flex flex-col items-center gap-8 p-8">
-        <Image
-          src="/me.jpeg"
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="me.jpeg"
           alt="Jack Lenzotti"
           width={150}
           height={150}
           className="rounded-full"
-          priority
         />
         <h1 className="text-3xl font-semibold">Jack Lenzotti</h1>
         <div className="flex gap-6">
