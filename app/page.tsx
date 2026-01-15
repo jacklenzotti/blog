@@ -30,32 +30,65 @@ const socialLinks = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <main className="flex flex-col items-center gap-8 p-8">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="me.jpeg"
-          alt="Jack Lenzotti"
-          width={150}
-          height={150}
-          className="rounded-full"
-        />
-        <h1 className="text-3xl font-semibold">Jack Lenzotti</h1>
-        <div className="flex gap-6">
-          {socialLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.name}
-              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
-            >
-              {link.icon}
-            </a>
-          ))}
-        </div>
-      </main>
+    <div>
+      {/* Hero Section */}
+      <section id="home" className="min-h-screen flex items-center justify-center">
+        <main className="flex flex-col items-center gap-8 p-8">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="me.jpeg"
+            alt="Jack Lenzotti"
+            width={150}
+            height={150}
+            className="rounded-full"
+          />
+          <h1 className="text-3xl font-semibold">Jack Lenzotti</h1>
+          <div className="flex gap-6">
+            {socialLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={link.name}
+                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        </main>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen flex items-center justify-center">
+        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+          <h2 className="text-3xl font-semibold">About</h2>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Coming soon.
+          </p>
+        </main>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="min-h-screen flex items-center justify-center">
+        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+          <h2 className="text-3xl font-semibold">Projects</h2>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Coming soon.
+          </p>
+        </main>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="min-h-screen flex items-center justify-center">
+        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+          <h2 className="text-3xl font-semibold">Contact</h2>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Coming soon.
+          </p>
+        </main>
+      </section>
     </div>
   );
 }
