@@ -1,3 +1,30 @@
+interface Repo {
+  name: string;
+  description: string | null;
+  html_url: string;
+  stargazers_count: number;
+  language: string | null;
+  pushed_at: string;
+}
+
+async function getRecentRepos(): Promise<Repo[]> {
+  const res = await fetch(
+    "https://api.github.com/users/jacklenzotti/repos?sort=pushed&per_page=6",
+    { next: { revalidate: 3600 } } 
+  );
+  if (!res.ok) return [];
+  return res.json();
+}
+
+async function getStarredRepos(): Promise<Repo[]> {
+  const res = await fetch(
+    "https://api.github.com/users/jacklenzotti/starred?per_page=6",
+    { next: { revalidate: 3600 } }
+  );
+  if (!res.ok) return [];
+  return res.json();
+}
+
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -28,7 +55,34 @@ const socialLinks = [
   },
 ];
 
-export default function Home() {
+function RepoCard({ repo }: { repo: Repo }) {
+  return (
+    <a
+      href={repo.html_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors text-left"
+    >
+      <h3 className="font-medium text-zinc-900 dark:text-zinc-100">{repo.name}</h3>
+      {repo.description && (
+        <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1 line-clamp-2">
+          {repo.description}
+        </p>
+      )}
+      <div className="flex items-center gap-4 mt-3 text-xs text-zinc-500 dark:text-zinc-500">
+        {repo.language && <span>{repo.language}</span>}
+        {repo.stargazers_count > 0 && <span>{repo.stargazers_count} stars</span>}
+      </div>
+    </a>
+  );
+}
+
+export default async function Home() {
+  const [recentRepos, starredRepos] = await Promise.all([
+    getRecentRepos(),
+    getStarredRepos(),
+  ]);
+
   return (
     <div>
       {/* Hero Section */}
@@ -62,31 +116,67 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="min-h-screen flex items-center justify-center">
-        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+        <main className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
           <h2 className="text-3xl font-semibold">About</h2>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Coming soon.
-          </p>
+          <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
+            <p>
+              Software engineer based in Chicago.
+            </p>
+            <p>
+              10x-ing my own productivity with agents. Building IDE plugins, MCP servers, and mobile applications.
+            </p>
+            <p className="text-sm text-zinc-500 dark:text-zinc-500">
+              Stack: Whatever gets the job done
+            </p>
+          </div>
         </main>
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="min-h-screen flex items-center justify-center">
-        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+      <section id="projects" className="min-h-screen flex items-center justify-center py-20">
+        <main className="flex flex-col items-center gap-8 p-8 max-w-4xl w-full">
           <h2 className="text-3xl font-semibold">Projects</h2>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Coming soon.
-          </p>
+
+          {recentRepos.length > 0 && (
+            <div className="w-full">
+              <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">Recently Active</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {recentRepos.map((repo) => (
+                  <RepoCard key={repo.name} repo={repo} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {starredRepos.length > 0 && (
+            <div className="w-full mt-8">
+              <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">Recently Starred</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {starredRepos.map((repo) => (
+                  <RepoCard key={repo.name} repo={repo} />
+                ))}
+              </div>
+            </div>
+          )}
         </main>
       </section>
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen flex items-center justify-center">
-        <main className="flex flex-col items-center gap-6 p-8 max-w-2xl text-center">
+        <main className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
           <h2 className="text-3xl font-semibold">Contact</h2>
           <p className="text-zinc-600 dark:text-zinc-400">
-            Coming soon.
+            Want to chat? Drop me a line.
           </p>
+          <a
+            href="mailto:jacklenzotti@gmail.com"
+            className="group flex items-center gap-2 text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-all"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            <span className="group-hover:underline">jacklenzotti@gmail.com</span>
+          </a>
         </main>
       </section>
     </div>
