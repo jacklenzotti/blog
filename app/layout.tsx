@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Header from "./components/Header";
 import ScrollIndicator from "./components/ScrollIndicator";
 import "./globals.css";
 
@@ -28,28 +29,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="fixed top-0 left-0 right-0 z-50">
-          <nav className="flex justify-center gap-16 p-6">
-            <a
-              href="#about"
-              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-all hover:scale-110"
-            >
-              About
-            </a>
-            <a
-              href="#projects"
-              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-all hover:scale-110"
-            >
-              Projects
-            </a>
-            <a
-              href="#contact"
-              className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-all hover:scale-110"
-            >
-              Contact
-            </a>
-          </nav>
-        </header>
+        <Header />
         {children}
         <ScrollIndicator />
       </body>
