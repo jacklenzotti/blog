@@ -17,6 +17,14 @@ const screenshots = [
 export default function ChessMatch() {
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-16">
+      {/* Back link */}
+      <a
+        href="./"
+        className="self-start mb-8 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+      >
+        &larr; Back
+      </a>
+
       {/* Header */}
       <div className="text-center max-w-2xl">
         <h1 className="text-4xl font-bold mb-2">ChessMatch</h1>
