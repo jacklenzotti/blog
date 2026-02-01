@@ -17,13 +17,15 @@ const screenshots = [
 export default function ChessMatch() {
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-16">
-      {/* Back link */}
-      <a
-        href="./"
-        className="self-start mb-8 text-sm text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-      >
-        &larr; Back
-      </a>
+      {/* Back link - matches header nav style */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex justify-start p-6">
+        <a
+          href="./"
+          className="text-lg font-medium text-zinc-700 hover:text-zinc-900 dark:text-zinc-300 dark:hover:text-zinc-100 transition-all hover:scale-110"
+        >
+          &larr; Back
+        </a>
+      </nav>
 
       {/* Header */}
       <div className="text-center max-w-2xl">

@@ -1,35 +1,25 @@
 "use client";
 
-import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function ScrollIndicator() {
-  const pathname = usePathname();
-  const [isVisible, setIsVisible] = useState(true);
+  const [dismissed, setDismissed] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-
-      // Hide when near bottom (within 100px)
-      const nearBottom = scrollTop + windowHeight >= docHeight - 100;
-      setIsVisible(!nearBottom);
+      if (window.scrollY > 50) {
+        setDismissed(true);
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Check initial state
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Only show on home page
-  if (pathname !== "/") {
-    return null;
-  }
-
-  if (!isVisible) {
+  if (dismissed) {
     return null;
   }
 
