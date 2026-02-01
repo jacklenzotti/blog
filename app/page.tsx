@@ -132,11 +132,7 @@ export default async function Home() {
           <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
             <p>Software engineer based in Chicago.</p>
             <p>
-              10x-ing my own productivity with agents. Building IDE plugins, MCP
-              servers, and mobile applications.
-            </p>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500">
-              Stack: Whatever gets the job done
+              Developer Experience / Hobbyist Game Maker
             </p>
           </div>
         </main>
