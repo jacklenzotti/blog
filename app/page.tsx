@@ -1,3 +1,6 @@
+import Header from "./components/Header";
+import ScrollIndicator from "./components/ScrollIndicator";
+
 interface Repo {
   name: string;
   description: string | null;
@@ -90,6 +93,7 @@ export default async function Home() {
 
   return (
     <div>
+      <Header />
       {/* Hero Section */}
       <section
         id="home"
@@ -131,9 +135,7 @@ export default async function Home() {
           <h2 className="text-3xl font-semibold">About</h2>
           <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
             <p>Software engineer based in Chicago.</p>
-            <p>
-              Developer Experience / Hobbyist Game Maker
-            </p>
+            <p>Developer Experience / Hobbyist Game Maker</p>
           </div>
         </main>
       </section>
@@ -239,6 +241,7 @@ export default async function Home() {
           </a>
         </main>
       </section>
+      <ScrollIndicator />
     </div>
   );
 }
