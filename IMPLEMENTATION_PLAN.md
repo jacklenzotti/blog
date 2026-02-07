@@ -12,15 +12,15 @@
 - [#32] About page at /about — DONE (app/about/page.tsx)
 - [#35] Meta tags, OpenGraph, Twitter card — DONE (app/layout.tsx)
 - [#30] Hero section redesign with animations — DONE (app/page.tsx, app/globals.css)
+- [#26] Hank project page at /hank — DONE (app/hank/page.tsx)
+- [#27] Hank Dash project page at /hank-dash — DONE (app/hank-dash/page.tsx)
+- [#38] Refactor home page to link to subpages — DONE (removed About section, links to /about, /projects, /hank, /hank-dash)
 
 ## Remaining
 
-- [#27] Create dedicated Hank Dash project page at /hank-dash
-- [#26] Create dedicated Hank project page at /hank
 - [#41] Update README.md to reflect current Next.js version and site structure
 - [#40] Add subtle background patterns or gradients to section dividers
 - [#39] Add loading states and error boundaries for GitHub API data
-- [#38] Refactor home page to link to dedicated subpages instead of long scroll — partially done (About section removed, links to /about and /projects exist)
 - [#36] Add dark mode toggle with system preference detection
 - [#34] Improve typography and spacing system for visual consistency
 - [#33] Add page transition animations between routes

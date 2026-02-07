@@ -23,6 +23,9 @@
 
 ## Pages
 
-- `/` — home page (hero, about, projects preview, contact sections)
-- `/projects` — projects index (featured apps + GitHub repos)
+- `/` — home page (hero, featured projects, recent repos, contact)
+- `/about` — expanded bio, skills, experience, interests
+- `/projects` — projects index (featured projects + GitHub repos)
 - `/chessmatch` — ChessMatch game showcase
+- `/hank` — Hank autonomous AI coding agent
+- `/hank-dash` — Hank Dash real-time monitoring dashboard
