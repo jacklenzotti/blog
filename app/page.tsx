@@ -96,19 +96,31 @@ export default async function Home() {
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-[calc(100vh-4rem)] flex items-center justify-center"
+        className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden"
       >
-        <div className="flex flex-col items-center gap-8 p-8">
+        {/* Subtle gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 via-white to-white dark:from-zinc-900 dark:via-[#0a0a0a] dark:to-[#0a0a0a]" />
+
+        <div className="flex flex-col items-center gap-6 p-8 relative z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="me.jpeg"
             alt="Jack Lenzotti"
-            width={150}
-            height={150}
-            className="rounded-full"
+            width={160}
+            height={160}
+            className="rounded-full animate-fade-in-up shadow-lg ring-4 ring-zinc-100 dark:ring-zinc-800"
           />
-          <h1 className="text-3xl font-semibold">Jack Lenzotti</h1>
-          <div className="flex gap-6">
+          <div className="text-center animate-fade-in-up animation-delay-200">
+            <h1 className="text-4xl font-bold tracking-tight">Jack Lenzotti</h1>
+            <p className="mt-2 text-lg text-zinc-500 dark:text-zinc-400">
+              Software Engineer &middot; Chicago
+            </p>
+          </div>
+          <p className="text-zinc-500 dark:text-zinc-400 text-center max-w-md animate-fade-in-up animation-delay-400">
+            Developer Experience engineer and hobbyist game maker. Building
+            tools that make developers&apos; lives easier.
+          </p>
+          <div className="flex gap-6 animate-fade-in-up animation-delay-600">
             {socialLinks.map((link) => (
               <a
                 key={link.name}
@@ -116,25 +128,11 @@ export default async function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
-                className="text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
               >
                 {link.icon}
               </a>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section
-        id="about"
-        className="min-h-screen flex items-center justify-center"
-      >
-        <div className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
-          <h2 className="text-3xl font-semibold">About</h2>
-          <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
-            <p>Software engineer based in Chicago.</p>
-            <p>Developer Experience / Hobbyist Game Maker</p>
           </div>
         </div>
       </section>

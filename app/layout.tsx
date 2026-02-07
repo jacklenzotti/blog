@@ -15,8 +15,27 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jack Lenzotti",
+  title: {
+    default: "Jack Lenzotti",
+    template: "%s | Jack Lenzotti",
+  },
   description: "Personal site of Jack Lenzotti",
+  authors: [{ name: "Jack Lenzotti" }],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Jack Lenzotti",
+    title: "Jack Lenzotti",
+    description: "Personal site of Jack Lenzotti",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Jack Lenzotti",
+    description: "Personal site of Jack Lenzotti",
+  },
 };
 
 export default function RootLayout({
