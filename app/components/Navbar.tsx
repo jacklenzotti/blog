@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -22,7 +23,7 @@ export default function Navbar() {
         >
           Jack Lenzotti
         </Link>
-        <div className="flex gap-8">
+        <div className="flex items-center gap-8">
           {navLinks.map((link) => {
             const isActive =
               link.href === "/"
@@ -44,6 +45,7 @@ export default function Navbar() {
               </Link>
             );
           })}
+          <ThemeToggle />
         </div>
       </nav>
     </header>
