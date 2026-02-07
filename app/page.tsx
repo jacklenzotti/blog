@@ -19,15 +19,6 @@ async function getRecentRepos(): Promise<Repo[]> {
   return res.json();
 }
 
-async function getStarredRepos(): Promise<Repo[]> {
-  const res = await fetch(
-    "https://api.github.com/users/jacklenzotti/starred?per_page=6",
-    { next: { revalidate: 3600 } }
-  );
-  if (!res.ok) return [];
-  return res.json();
-}
-
 const socialLinks = [
   {
     name: "LinkedIn",
@@ -86,10 +77,7 @@ function RepoCard({ repo }: { repo: Repo }) {
 }
 
 export default async function Home() {
-  const [recentRepos, starredRepos] = await Promise.all([
-    getRecentRepos(),
-    getStarredRepos(),
-  ]);
+  const recentRepos = await getRecentRepos();
 
   return (
     <div>
@@ -98,25 +86,26 @@ export default async function Home() {
         id="home"
         className="min-h-[calc(100vh-4rem)] flex items-center justify-center relative overflow-hidden"
       >
-        {/* Subtle gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-zinc-50 via-white to-white dark:from-zinc-900 dark:via-[#0a0a0a] dark:to-[#0a0a0a]" />
+        {/* Layered gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-zinc-50 via-white to-zinc-100 dark:from-zinc-900 dark:via-[#0a0a0a] dark:to-zinc-900" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-200/30 via-transparent to-transparent dark:from-zinc-700/10" />
 
-        <div className="flex flex-col items-center gap-6 p-8 relative z-10">
+        <div className="flex flex-col items-center gap-8 p-8 relative z-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="me.jpeg"
             alt="Jack Lenzotti"
             width={160}
             height={160}
-            className="rounded-full animate-fade-in-up shadow-lg ring-4 ring-zinc-100 dark:ring-zinc-800"
+            className="rounded-full animate-fade-in-up shadow-xl ring-4 ring-zinc-100 dark:ring-zinc-800"
           />
           <div className="text-center animate-fade-in-up animation-delay-200">
-            <h1 className="text-4xl font-bold tracking-tight">Jack Lenzotti</h1>
-            <p className="mt-2 text-lg text-zinc-500 dark:text-zinc-400">
+            <h1 className="text-5xl font-bold tracking-tight">Jack Lenzotti</h1>
+            <p className="mt-3 text-xl text-zinc-500 dark:text-zinc-400">
               Software Engineer &middot; Chicago
             </p>
           </div>
-          <p className="text-zinc-500 dark:text-zinc-400 text-center max-w-md animate-fade-in-up animation-delay-400">
+          <p className="text-lg text-zinc-500 dark:text-zinc-400 text-center max-w-lg animate-fade-in-up animation-delay-400">
             Developer Experience engineer and hobbyist game maker. Building
             tools that make developers&apos; lives easier.
           </p>
@@ -128,7 +117,7 @@ export default async function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={link.name}
-                className="text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 transition-colors"
+                className="text-zinc-400 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-100 transition-all hover:scale-110"
               >
                 {link.icon}
               </a>
@@ -153,18 +142,30 @@ export default async function Home() {
             </Link>
           </div>
 
-          {/* Featured App */}
+          {/* Featured Projects */}
           <div className="w-full">
             <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">
-              Apps
+              Featured
             </h3>
-            <div className="md:max-w-[calc(50%-0.5rem)]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <ProjectCard
                 title="ChessMatch"
                 description="A colorful chess puzzle game"
                 href="/chessmatch"
                 image="chessmatch/feature.jpg"
                 tags={["iOS & Android", "Coming Soon"]}
+              />
+              <ProjectCard
+                title="Hank"
+                description="Autonomous AI coding agent for GitHub issues"
+                href="/hank"
+                tags={["CLI Tool", "Open Source"]}
+              />
+              <ProjectCard
+                title="Hank Dash"
+                description="Real-time monitoring dashboard for Hank agents"
+                href="/hank-dash"
+                tags={["Web App", "Open Source"]}
               />
             </div>
           </div>
@@ -175,20 +176,7 @@ export default async function Home() {
                 Recently Active
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {recentRepos.map((repo) => (
-                  <RepoCard key={repo.name} repo={repo} />
-                ))}
-              </div>
-            </div>
-          )}
-
-          {starredRepos.length > 0 && (
-            <div className="w-full mt-8">
-              <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">
-                Recently Starred
-              </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {starredRepos.map((repo) => (
+                {recentRepos.slice(0, 4).map((repo) => (
                   <RepoCard key={repo.name} repo={repo} />
                 ))}
               </div>
@@ -198,10 +186,7 @@ export default async function Home() {
       </section>
 
       {/* Contact Section */}
-      <section
-        id="contact"
-        className="min-h-screen flex items-center justify-center"
-      >
+      <section id="contact" className="flex items-center justify-center py-20">
         <div className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
           <h2 className="text-3xl font-semibold">Contact</h2>
           <p className="text-zinc-600 dark:text-zinc-400">

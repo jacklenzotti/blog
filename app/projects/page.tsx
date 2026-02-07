@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ProjectCard from "../components/ProjectCard";
 
 export const metadata: Metadata = {
-  title: "Projects - Jack Lenzotti",
+  title: "Projects",
   description: "Projects and apps by Jack Lenzotti.",
 };
 
@@ -34,10 +34,10 @@ export default async function ProjectsPage() {
         Apps, tools, and open source work.
       </p>
 
-      {/* Featured Apps */}
+      {/* Featured Projects */}
       <section className="mb-16">
         <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-4 uppercase tracking-wider">
-          Apps
+          Featured
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
@@ -46,6 +46,18 @@ export default async function ProjectsPage() {
             href="/chessmatch"
             image="chessmatch/feature.jpg"
             tags={["iOS & Android", "Coming Soon"]}
+          />
+          <ProjectCard
+            title="Hank"
+            description="Autonomous AI coding agent for GitHub issues"
+            href="/hank"
+            tags={["CLI", "Open Source"]}
+          />
+          <ProjectCard
+            title="Hank Dash"
+            description="Real-time monitoring dashboard for Hank agents"
+            href="/hank-dash"
+            tags={["Web App", "Open Source"]}
           />
         </div>
       </section>

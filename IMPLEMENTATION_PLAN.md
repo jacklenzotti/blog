@@ -9,12 +9,9 @@
 - [#29] Projects index page at /projects — DONE (app/projects/page.tsx)
 - [#31] Reusable ProjectCard component — DONE (app/components/ProjectCard.tsx)
 - [#28] ChessMatch page at /chessmatch — DONE (app/chessmatch/page.tsx)
-
-## In Progress
-
-- [#32] Add About page at /about with expanded bio and skills
-- [#35] Add meta tags, OpenGraph, and favicon for social sharing
-- [#30] Redesign home page hero section with animation and stronger visual identity
+- [#32] About page at /about — DONE (app/about/page.tsx)
+- [#35] Meta tags, OpenGraph, Twitter card — DONE (app/layout.tsx)
+- [#30] Hero section redesign with animations — DONE (app/page.tsx, app/globals.css)
 
 ## Remaining
 
@@ -23,7 +20,7 @@
 - [#41] Update README.md to reflect current Next.js version and site structure
 - [#40] Add subtle background patterns or gradients to section dividers
 - [#39] Add loading states and error boundaries for GitHub API data
-- [#38] Refactor home page to link to dedicated subpages instead of long scroll
+- [#38] Refactor home page to link to dedicated subpages instead of long scroll — partially done (About section removed, links to /about and /projects exist)
 - [#36] Add dark mode toggle with system preference detection
 - [#34] Improve typography and spacing system for visual consistency
 - [#33] Add page transition animations between routes
@@ -35,3 +32,5 @@
 - Dark mode via `prefers-color-scheme` media query (CSS-only)
 - Images must use `<img>` (unoptimized mode for static export)
 - No test framework currently set up in the project
+- CSS animations work well for static export (no client component needed for hero animations)
+- Title template in metadata (`%s | Jack Lenzotti`) lets subpages set just their name

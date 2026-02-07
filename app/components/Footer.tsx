@@ -36,6 +36,8 @@ const footerLinks = [
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
   { label: "ChessMatch", href: "/chessmatch" },
+  { label: "Hank", href: "/hank" },
+  { label: "Hank Dash", href: "/hank-dash" },
 ];
 
 export default function Footer() {

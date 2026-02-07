@@ -15,26 +15,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jacklenzotti.github.io/blog"),
   title: {
     default: "Jack Lenzotti",
     template: "%s | Jack Lenzotti",
   },
-  description: "Personal site of Jack Lenzotti",
+  description:
+    "Software engineer based in Chicago. Developer Experience, game dev, and open source.",
   authors: [{ name: "Jack Lenzotti" }],
+  keywords: [
+    "Jack Lenzotti",
+    "software engineer",
+    "developer experience",
+    "Chicago",
+  ],
   robots: {
     index: true,
     follow: true,
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
   openGraph: {
     type: "website",
     siteName: "Jack Lenzotti",
     title: "Jack Lenzotti",
-    description: "Personal site of Jack Lenzotti",
+    description:
+      "Software engineer based in Chicago. Developer Experience, game dev, and open source.",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
     title: "Jack Lenzotti",
-    description: "Personal site of Jack Lenzotti",
+    description:
+      "Software engineer based in Chicago. Developer Experience, game dev, and open source.",
   },
 };
 
