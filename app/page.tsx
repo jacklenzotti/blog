@@ -126,6 +126,9 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Section divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+
       {/* Projects Section */}
       <section
         id="projects"
@@ -184,6 +187,9 @@ export default async function Home() {
           )}
         </div>
       </section>
+
+      {/* Section divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
 
       {/* Contact Section */}
       <section id="contact" className="flex items-center justify-center py-20">
