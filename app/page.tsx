@@ -1,5 +1,5 @@
-import Header from "./components/Header";
-import ScrollIndicator from "./components/ScrollIndicator";
+import Link from "next/link";
+import ProjectCard from "./components/ProjectCard";
 
 interface Repo {
   name: string;
@@ -93,13 +93,12 @@ export default async function Home() {
 
   return (
     <div>
-      <Header />
       {/* Hero Section */}
       <section
         id="home"
-        className="min-h-screen flex items-center justify-center"
+        className="min-h-[calc(100vh-4rem)] flex items-center justify-center"
       >
-        <main className="flex flex-col items-center gap-8 p-8">
+        <div className="flex flex-col items-center gap-8 p-8">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="me.jpeg"
@@ -123,7 +122,7 @@ export default async function Home() {
               </a>
             ))}
           </div>
-        </main>
+        </div>
       </section>
 
       {/* About Section */}
@@ -131,13 +130,13 @@ export default async function Home() {
         id="about"
         className="min-h-screen flex items-center justify-center"
       >
-        <main className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
+        <div className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
           <h2 className="text-3xl font-semibold">About</h2>
           <div className="space-y-4 text-zinc-600 dark:text-zinc-400">
             <p>Software engineer based in Chicago.</p>
             <p>Developer Experience / Hobbyist Game Maker</p>
           </div>
-        </main>
+        </div>
       </section>
 
       {/* Projects Section */}
@@ -145,39 +144,31 @@ export default async function Home() {
         id="projects"
         className="min-h-screen flex items-center justify-center py-20"
       >
-        <main className="flex flex-col items-center gap-8 p-8 max-w-4xl w-full">
-          <h2 className="text-3xl font-semibold">Projects</h2>
+        <div className="flex flex-col items-center gap-8 p-8 max-w-4xl w-full">
+          <div className="flex items-center justify-between w-full">
+            <h2 className="text-3xl font-semibold">Projects</h2>
+            <Link
+              href="/projects"
+              className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+            >
+              View all &rarr;
+            </Link>
+          </div>
 
           {/* Featured App */}
           <div className="w-full">
             <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">
               Apps
             </h3>
-            <a
-              href="chessmatch"
-              className="block p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors text-left md:max-w-[calc(50%-0.5rem)]"
-            >
-              <div className="flex items-center gap-3">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="chessmatch/feature.jpg"
-                  alt="ChessMatch"
-                  className="w-12 h-12 rounded-lg object-cover"
-                />
-                <div>
-                  <h3 className="font-medium text-zinc-900 dark:text-zinc-100">
-                    ChessMatch
-                  </h3>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                    A colorful chess puzzle game
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-center gap-4 mt-3 text-xs text-zinc-500 dark:text-zinc-500">
-                <span>iOS &amp; Android</span>
-                <span>Coming Soon</span>
-              </div>
-            </a>
+            <div className="md:max-w-[calc(50%-0.5rem)]">
+              <ProjectCard
+                title="ChessMatch"
+                description="A colorful chess puzzle game"
+                href="/chessmatch"
+                image="chessmatch/feature.jpg"
+                tags={["iOS & Android", "Coming Soon"]}
+              />
+            </div>
           </div>
 
           {recentRepos.length > 0 && (
@@ -205,7 +196,7 @@ export default async function Home() {
               </div>
             </div>
           )}
-        </main>
+        </div>
       </section>
 
       {/* Contact Section */}
@@ -213,7 +204,7 @@ export default async function Home() {
         id="contact"
         className="min-h-screen flex items-center justify-center"
       >
-        <main className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
+        <div className="flex flex-col items-center gap-8 p-8 max-w-2xl text-center">
           <h2 className="text-3xl font-semibold">Contact</h2>
           <p className="text-zinc-600 dark:text-zinc-400">
             Want to chat? Drop me a line.
@@ -239,9 +230,8 @@ export default async function Home() {
               jacklenzotti@gmail.com
             </span>
           </a>
-        </main>
+        </div>
       </section>
-      <ScrollIndicator />
     </div>
   );
 }
