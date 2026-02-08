@@ -4,33 +4,33 @@
 
 ## Already Implemented
 
-- [#24] Site-wide navigation bar — DONE (app/components/Navbar.tsx)
-- [#25] Footer with links, copyright, social icons — DONE (app/components/Footer.tsx)
-- [#29] Projects index page at /projects — DONE (app/projects/page.tsx)
-- [#31] Reusable ProjectCard component — DONE (app/components/ProjectCard.tsx)
-- [#28] ChessMatch page at /chessmatch — DONE (app/chessmatch/page.tsx)
-- [#32] About page at /about — DONE (app/about/page.tsx)
-- [#35] Meta tags, OpenGraph, Twitter card — DONE (app/layout.tsx)
-- [#30] Hero section redesign with animations — DONE (app/page.tsx, app/globals.css)
-- [#26] Hank project page at /hank — DONE (app/hank/page.tsx)
-- [#27] Hank Dash project page at /hank-dash — DONE (app/hank-dash/page.tsx)
-- [#38] Refactor home page to link to subpages — DONE (removed About section, links to /about, /projects, /hank, /hank-dash)
+- [#24] Site-wide navigation bar — DONE
+- [#25] Footer with links, copyright, social icons — DONE
+- [#29] Projects index page at /projects — DONE
+- [#31] Reusable ProjectCard component — DONE
+- [#28] ChessMatch page at /chessmatch — DONE
+- [#32] About page at /about — DONE
+- [#35] Meta tags, OpenGraph, Twitter card — DONE
+- [#30] Hero section redesign with animations — DONE
+- [#26] Hank project page at /hank — DONE
+- [#27] Hank Dash project page at /hank-dash — DONE
+- [#38] Refactor home page to link to subpages — DONE
+- [#41] Update README.md — DONE
+- [#36] Dark mode toggle (system/light/dark cycle, ThemeScript for flash prevention, useSyncExternalStore) — DONE
+- [#34] Typography system (Geist font, consistent heading hierarchy, standardized badge styles) — DONE
+- [#39] Loading states and error boundaries (skeleton loading.tsx + error.tsx with retry) — DONE
+- [#33] Page transition animations (template.tsx with animate-page-enter) — DONE
 
 ## Remaining
 
-- [#41] Update README.md to reflect current Next.js version and site structure
 - [#40] Add subtle background patterns or gradients to section dividers
-- [#39] Add loading states and error boundaries for GitHub API data
-- [#36] Add dark mode toggle with system preference detection
-- [#34] Improve typography and spacing system for visual consistency
-- [#33] Add page transition animations between routes
 
 ## Learnings
 
 - Next.js 16 with static export, basePath `/blog` in prod
-- Tailwind CSS v4 with inline theme config (no tailwind.config.ts)
-- Dark mode via `prefers-color-scheme` media query (CSS-only)
-- Images must use `<img>` (unoptimized mode for static export)
-- No test framework currently set up in the project
-- CSS animations work well for static export (no client component needed for hero animations)
-- Title template in metadata (`%s | Jack Lenzotti`) lets subpages set just their name
+- Tailwind CSS v4 with `@custom-variant dark` for class-based dark mode
+- `useSyncExternalStore` is the correct React pattern for reading localStorage without lint errors
+- ThemeScript in `<head>` prevents dark mode flash before hydration
+- `template.tsx` runs on every navigation (vs `layout.tsx` which persists) — ideal for page transitions
+- Error boundaries need `"use client"` directive
+- ESLint `react-hooks/set-state-in-effect` rule is strict — no setState in effects at all
