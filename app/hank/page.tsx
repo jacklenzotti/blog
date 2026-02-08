@@ -79,7 +79,7 @@ export default function Hank() {
           {techStack.map((tech, i) => (
             <span
               key={i}
-              className="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 rounded-lg text-sm"
+              className="px-3 py-1 border border-zinc-200 dark:border-zinc-800 rounded-lg text-sm text-zinc-600 dark:text-zinc-400"
             >
               {tech}
             </span>

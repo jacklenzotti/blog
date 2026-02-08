@@ -90,18 +90,21 @@ export default function AboutPage() {
           />
           <div className="flex-1">
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-              I'm a Developer Experience engineer based in Chicago, passionate
-              about building tools that make developers' lives easier.
+              I&apos;m a Developer Experience engineer based in Chicago,
+              passionate about building tools that make developers&apos; lives
+              easier.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400 mb-4">
-              When I'm not working on developer tooling at scale, you'll find me
-              experimenting with game development. I believe in clean UIs, great
-              developer experiences, and writing code that's a joy to work with.
+              When I&apos;m not working on developer tooling at scale,
+              you&apos;ll find me experimenting with game development. I believe
+              in clean UIs, great developer experiences, and writing code
+              that&apos;s a joy to work with.
             </p>
             <p className="text-zinc-600 dark:text-zinc-400">
-              I'm always exploring new technologies and finding ways to improve
-              workflows, whether that's through better tooling, cleaner
-              architecture, or just making things a bit more delightful to use.
+              I&apos;m always exploring new technologies and finding ways to
+              improve workflows, whether that&apos;s through better tooling,
+              cleaner architecture, or just making things a bit more delightful
+              to use.
             </p>
           </div>
         </div>

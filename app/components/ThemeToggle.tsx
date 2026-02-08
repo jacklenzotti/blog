@@ -1,52 +1,70 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useSyncExternalStore } from "react";
 
 type Theme = "system" | "light" | "dark";
 
+function subscribe(callback: () => void) {
+  window.addEventListener("storage", callback);
+  return () => window.removeEventListener("storage", callback);
+}
+
+function getSnapshot(): Theme {
+  return (localStorage.getItem("theme") as Theme) || "system";
+}
+
+function getServerSnapshot(): Theme {
+  return "system";
+}
+
+function applyTheme(theme: Theme) {
+  const root = document.documentElement;
+  if (theme === "dark") {
+    root.classList.add("dark");
+  } else if (theme === "light") {
+    root.classList.remove("dark");
+  } else {
+    root.classList.toggle(
+      "dark",
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
+  }
+}
+
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<Theme>("system");
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
+  // Apply theme whenever it changes
   useEffect(() => {
-    const stored = localStorage.getItem("theme") as Theme | null;
-    if (stored) setTheme(stored);
-  }, []);
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else if (theme === "light") {
-      root.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-    } else {
-      localStorage.removeItem("theme");
-      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-    }
+    applyTheme(theme);
   }, [theme]);
 
   // Listen for system preference changes when in "system" mode
+  const handleSystemChange = useCallback(
+    (e: MediaQueryListEvent) => {
+      if (theme === "system") {
+        document.documentElement.classList.toggle("dark", e.matches);
+      }
+    },
+    [theme]
+  );
+
   useEffect(() => {
-    if (theme !== "system") return;
     const mq = window.matchMedia("(prefers-color-scheme: dark)");
-    const handler = (e: MediaQueryListEvent) => {
-      document.documentElement.classList.toggle("dark", e.matches);
-    };
-    mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
-  }, [theme]);
+    mq.addEventListener("change", handleSystemChange);
+    return () => mq.removeEventListener("change", handleSystemChange);
+  }, [handleSystemChange]);
 
   const cycle = () => {
-    setTheme((prev) => {
-      if (prev === "system") return "light";
-      if (prev === "light") return "dark";
-      return "system";
-    });
+    const next: Theme =
+      theme === "system" ? "light" : theme === "light" ? "dark" : "system";
+    if (next === "system") {
+      localStorage.removeItem("theme");
+    } else {
+      localStorage.setItem("theme", next);
+    }
+    // Dispatch storage event to trigger re-render
+    window.dispatchEvent(new Event("storage"));
   };
 
   return (
