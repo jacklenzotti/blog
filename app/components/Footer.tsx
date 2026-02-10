@@ -38,6 +38,8 @@ const footerLinks = [
   { label: "ChessMatch", href: "/chessmatch" },
   { label: "Hank", href: "/hank" },
   { label: "Hank Dash", href: "/hank-dash" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Support", href: "/support" },
 ];
 
 export default function Footer() {
