@@ -41,6 +41,13 @@ export default async function ProjectsPage() {
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
+            title="RhythmMatch"
+            description="A neon rhythm puzzle game"
+            href="/rhythmmatch"
+            image="rhythmmatch/feature.png"
+            tags={["iOS & Android", "Coming Soon"]}
+          />
+          <ProjectCard
             title="ChessMatch"
             description="A colorful chess puzzle game"
             href="/chessmatch"

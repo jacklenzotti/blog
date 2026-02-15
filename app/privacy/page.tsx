@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "Privacy policy for Zottware apps and games.",
+  description: "Privacy policy for Jack Lenzotti's apps and games.",
 };
 
 export default function Privacy() {
@@ -20,7 +20,7 @@ export default function Privacy() {
               Overview
             </h2>
             <p>
-              Zottware LLC (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;)
+              Jack Lenzotti (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;)
               operates mobile games including ChessMatch and RhythmMatch. This
               policy explains what data we collect and how we use it.
             </p>
@@ -180,10 +180,10 @@ export default function Privacy() {
             <p>
               If you have questions about this policy, contact us at{" "}
               <a
-                href="mailto:contact@zottware.com"
+                href="mailto:jacklenzotti@gmail.com"
                 className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline"
               >
-                contact@zottware.com
+                jacklenzotti@gmail.com
               </a>
               .
             </p>

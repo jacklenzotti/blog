@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Support",
   description:
-    "Get help with Zottware games — ChessMatch, RhythmMatch, and more.",
+    "Get help with Jack Lenzotti's games — ChessMatch, RhythmMatch, and more.",
 };
 
 export default function Support() {
@@ -26,7 +26,7 @@ export default function Support() {
               and we&apos;ll get back to you as soon as we can.
             </p>
             <a
-              href="mailto:contact@zottware.com"
+              href="mailto:jacklenzotti@gmail.com"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-zinc-900 dark:bg-zinc-100 text-white dark:text-zinc-900 text-sm font-medium hover:opacity-80 transition-opacity"
             >
               <svg
@@ -42,7 +42,7 @@ export default function Support() {
                   d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
                 />
               </svg>
-              contact@zottware.com
+              jacklenzotti@gmail.com
             </a>
           </div>
 
@@ -66,9 +66,9 @@ export default function Support() {
                   I found a bug — how do I report it?
                 </p>
                 <p className="text-zinc-500 dark:text-zinc-400 mt-1">
-                  Send us an email at contact@zottware.com with a description of
-                  the issue, what device you&apos;re on, and a screenshot if you
-                  have one.
+                  Send us an email at jacklenzotti@gmail.com with a description
+                  of the issue, what device you&apos;re on, and a screenshot if
+                  you have one.
                 </p>
               </div>
               <div>
