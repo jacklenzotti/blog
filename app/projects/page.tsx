@@ -69,6 +69,36 @@ export default async function ProjectsPage() {
         </div>
       </section>
 
+      {/* Highlighted Repos */}
+      <section className="mb-16">
+        <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-4 uppercase tracking-wider">
+          Open Source
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <ProjectCard
+            title="ReelDeal"
+            description="Automated pipeline that converts Reddit stories into short-form vertical videos with AI voiceover for YouTube Shorts, TikTok, and Reels"
+            href="https://github.com/jacklenzotti/ReelDeal"
+            tags={["Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="just-google-it"
+            description="MCP server and CLI that gives AI coding agents web search so they can look up solutions when they get stuck"
+            href="https://github.com/jacklenzotti/just-google-it"
+            tags={["Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="picasso"
+            description="CLI pipeline for converting AI-generated images into game-ready 2D assets with sprite slicing, background removal, and atlas packing"
+            href="https://github.com/jacklenzotti/picasso"
+            tags={["Open Source"]}
+            external
+          />
+        </div>
+      </section>
+
       {/* GitHub Repos */}
       {repos.length > 0 && (
         <section>
