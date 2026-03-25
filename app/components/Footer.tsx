@@ -35,7 +35,7 @@ const footerLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
-  { label: "Zottware", href: "https://zottware.com", external: true },
+  { label: "zottware", href: "https://zottware.com", external: true },
   { label: "Privacy", href: "/privacy" },
   { label: "Support", href: "/support" },
 ];

@@ -34,22 +34,20 @@ export default async function ProjectsPage() {
         Apps, tools, and open source work.
       </p>
 
-      {/* Games */}
+      {/* zottware */}
       <section className="mb-16">
         <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-4 uppercase tracking-wider">
-          Games
+          zottware
         </h2>
-        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6 border border-zinc-200 dark:border-zinc-800 rounded-lg p-4">
-          Two mobile games. One month. Built with AI agents.{" "}
-          <a
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <ProjectCard
+            title="zottware"
+            description="Solo game studio. Two mobile games built in one month with AI agents."
             href="https://zottware.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline"
-          >
-            Learn more at zottware.com &rarr;
-          </a>
-        </p>
+            tags={["Game Studio"]}
+            external
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <ProjectCard
             title="ChessMatch"
