@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { marked } from "marked";
 
 const POSTS_DIR = path.join(process.cwd(), "content/posts");
+const BASE_PATH = process.env.NODE_ENV === "production" ? "/blog" : "";
 
 export interface PostMeta {
   slug: string;
@@ -29,13 +30,14 @@ export function getAllPostMeta(): PostMeta[] {
       const slug = filename.replace(/\.md$/, "");
       const raw = fs.readFileSync(path.join(POSTS_DIR, filename), "utf-8");
       const { data } = matter(raw);
+      const rawImage: string | undefined = data.image ?? undefined;
       return {
         slug,
         title: data.title ?? slug,
         date: data.date ?? "",
         excerpt: data.excerpt ?? "",
         draft: data.draft === true,
-        image: data.image ?? undefined,
+        image: rawImage && BASE_PATH ? `${BASE_PATH}${rawImage}` : rawImage,
       };
     })
     .sort((a, b) => (a.date < b.date ? 1 : -1));
@@ -55,14 +57,20 @@ export function getPost(slug: string): Post | null {
   if (!fs.existsSync(filepath)) return null;
   const raw = fs.readFileSync(filepath, "utf-8");
   const { data, content } = matter(raw);
-  const html = marked(content) as string;
+  let html = marked(content) as string;
+  // Prefix absolute image paths with basePath for production
+  if (BASE_PATH) {
+    html = html.replace(/src="\/(?!\/)/g, `src="${BASE_PATH}/`);
+  }
+  const rawImage: string | undefined = data.image ?? undefined;
+  const image = rawImage && BASE_PATH ? `${BASE_PATH}${rawImage}` : rawImage;
   return {
     slug,
     title: data.title ?? slug,
     date: data.date ?? "",
     excerpt: data.excerpt ?? "",
     draft: data.draft === true,
-    image: data.image ?? undefined,
+    image,
     content: html,
   };
 }

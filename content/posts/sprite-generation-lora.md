@@ -2,7 +2,7 @@
 title: "SDXL Game Sprite Generation Pipeline with LORA"
 date: "2026-03-24"
 excerpt: "Having a model draw bad art is hard.  Having a model copy my art is easy."
-image: "/blog/sprite-generation-lora/elephant.png"
+image: "/post-images/elephant.png"
 draft: false
 ---
 
@@ -20,7 +20,7 @@ Because I am opportunistically lazy, I spent a few days prompting NanoBanana, Ge
 
 The model is trying to help. It has been trained to produce quality output, and it is doing exactly that. When I asked for a doodle of a cat, it gave me the best cat it could.
 
-![Gemini's attempt at a "simple doodle of a cat"](/blog/sprite-generation-lora/gemini_cat.png)
+![Gemini's attempt at a "simple doodle of a cat"](/post-images/gemini_cat.png)
 
 The answer was a custom LORA trained on a curated set of my own work.
 
@@ -30,9 +30,9 @@ My training set was my own artwork: 34 images (mirrored to 68 for training) draw
 
 Subjects were focused on animals with some simple objects like fruits, sticks, trees, etc mixed in.
 
-![Hand-drawn monkey](/blog/sprite-generation-lora/handdrawn_monkey.png)
-![Hand-drawn kangaroo](/blog/sprite-generation-lora/handdrawn_kangaroo.png)
-![Hand-drawn bush](/blog/sprite-generation-lora/handdrawn_bush.png)
+![Hand-drawn monkey](/post-images/handdrawn_monkey.png)
+![Hand-drawn kangaroo](/post-images/handdrawn_kangaroo.png)
+![Hand-drawn bush](/post-images/handdrawn_bush.png)
 
 ## Captioning
 
@@ -56,26 +56,26 @@ I used [SimpleTuner](https://github.com/bghira/SimpleTuner) to train the LORA as
 
 First training run — base model on the left, LoRA output on the right:
 
-![Step 100 — early training](/blog/sprite-generation-lora/first_lora_step_100.png)
-![Step 700 — picking up the linework](/blog/sprite-generation-lora/first_lora_step_700.png)
-![Step 1200 — style locked in](/blog/sprite-generation-lora/first_lora_step_1200.png)
+![Step 100 — early training](/post-images/first_lora_step_100.png)
+![Step 700 — picking up the linework](/post-images/first_lora_step_700.png)
+![Step 1200 — style locked in](/post-images/first_lora_step_1200.png)
 
 After refining the captions and adding some more examples:
 
-![Second run, step 100](/blog/sprite-generation-lora/second_lora_step_100.png)
-![Second run, step 1200](/blog/sprite-generation-lora/second_lora_step_1200.png)
-![Second run, step 2400](/blog/sprite-generation-lora/second_lora_step_2400.png)
+![Second run, step 100](/post-images/second_lora_step_100.png)
+![Second run, step 1200](/post-images/second_lora_step_1200.png)
+![Second run, step 2400](/post-images/second_lora_step_2400.png)
 
 The first raw output from the LoRA:
 
 And the final game-ready sprites:
 
-![Elephant](/blog/sprite-generation-lora/elephant.png)
-![Treefrog](/blog/sprite-generation-lora/treefrog.png)
-![Hedgehog](/blog/sprite-generation-lora/hedgehog.png)
-![Crab](/blog/sprite-generation-lora/crab.png)
-![Greyhound](/blog/sprite-generation-lora/greyhound.png)
+![Elephant](/post-images/elephant.png)
+![Treefrog](/post-images/treefrog.png)
+![Hedgehog](/post-images/hedgehog.png)
+![Crab](/post-images/crab.png)
+![Greyhound](/post-images/greyhound.png)
 
 And it accidentally made the Velvet Underground cover:
 
-![Banana](/blog/sprite-generation-lora/banana.png)
+![Banana](/post-images/banana.png)
