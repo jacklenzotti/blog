@@ -54,11 +54,19 @@ export default function Support() {
             <div className="space-y-4 text-sm">
               <div>
                 <p className="font-medium text-zinc-900 dark:text-zinc-100">
-                  When are your games coming out?
+                  Where can I find info about your games?
                 </p>
                 <p className="text-zinc-500 dark:text-zinc-400 mt-1">
-                  ChessMatch and RhythmMatch are both in development. Follow us
-                  on social media for release updates.
+                  Visit{" "}
+                  <a
+                    href="https://zottware.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline"
+                  >
+                    zottware.com
+                  </a>{" "}
+                  for all game info, trailers, and download links.
                 </p>
               </div>
               <div>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
+import { getPublishedPostMeta } from "../lib/posts";
 
 interface Repo {
   name: string;
@@ -129,6 +130,61 @@ export default async function Home() {
       {/* Section divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
 
+      {/* Blog Section */}
+      {(() => {
+        const posts = getPublishedPostMeta();
+        if (posts.length === 0) return null;
+        return (
+          <section className="py-20">
+            <div className="flex flex-col gap-8 p-8 max-w-4xl mx-auto w-full">
+              <div className="flex items-center justify-between w-full">
+                <h2 className="text-3xl font-semibold">Blog</h2>
+                <Link
+                  href="/blog"
+                  className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  View all &rarr;
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 gap-4">
+                {posts.slice(0, 3).map((post) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}`}
+                    className="flex items-start gap-4 p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
+                  >
+                    {post.image && (
+                      /* eslint-disable-next-line @next/next/no-img-element */
+                      <img
+                        src={post.image}
+                        alt=""
+                        className="w-16 h-16 rounded-lg object-cover shrink-0"
+                      />
+                    )}
+                    <div>
+                      <h3 className="font-medium text-zinc-900 dark:text-zinc-100">
+                        {post.title}
+                      </h3>
+                      {post.excerpt && (
+                        <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-1">
+                          {post.excerpt}
+                        </p>
+                      )}
+                      <p className="text-xs text-zinc-500 dark:text-zinc-500 mt-2">
+                        {post.date}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })()}
+
+      {/* Section divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+
       {/* Projects Section */}
       <section
         id="projects"
@@ -145,30 +201,50 @@ export default async function Home() {
             </Link>
           </div>
 
-          {/* Featured Projects */}
+          {/* Games */}
           <div className="w-full">
             <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">
-              Featured
+              Games
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <ProjectCard
                 title="ChessMatch"
-                description="A colorful chess puzzle game"
-                href="/chessmatch"
+                description="Chess strategy meets match-3 puzzling. 100 hand-designed levels."
+                href="https://zottware.com/chessmatch"
                 image="chessmatch/feature.jpg"
-                tags={["iOS & Android", "Coming Soon"]}
+                tags={["iOS", "Android", "Steam"]}
+                external
               />
               <ProjectCard
-                title="Hank"
-                description="Autonomous AI coding agent for GitHub issues"
-                href="/hank"
-                tags={["CLI Tool", "Open Source"]}
+                title="RhythmMatch"
+                description="Beat-synced match-3 with synthwave vibes."
+                href="https://zottware.com/rhythmmatch"
+                image="rhythmmatch/feature.png"
+                tags={["iOS", "Android"]}
+                external
+              />
+            </div>
+          </div>
+
+          {/* Open Source */}
+          <div className="w-full">
+            <h3 className="text-sm text-zinc-500 dark:text-zinc-500 mb-4">
+              Open Source
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ProjectCard
+                title="ReelDeal"
+                description="Automated pipeline that converts Reddit stories into short-form vertical videos with AI voiceover"
+                href="https://github.com/jacklenzotti/ReelDeal"
+                tags={["Open Source"]}
+                external
               />
               <ProjectCard
-                title="Hank Dash"
-                description="Real-time monitoring dashboard for Hank agents"
-                href="/hank-dash"
-                tags={["Web App", "Open Source"]}
+                title="picasso"
+                description="CLI pipeline for converting AI-generated images into game-ready 2D assets"
+                href="https://github.com/jacklenzotti/picasso"
+                tags={["Open Source"]}
+                external
               />
             </div>
           </div>

@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
+  { label: "Zottware", href: "https://zottware.com", external: true },
 ];
 
 export default function Navbar() {
@@ -26,6 +27,20 @@ export default function Navbar() {
         </Link>
         <div className="flex items-center gap-8">
           {navLinks.map((link) => {
+            if ("external" in link && link.external) {
+              return (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  {link.label}
+                </a>
+              );
+            }
+
             const isActive =
               link.href === "/"
                 ? pathname === "/"

@@ -59,15 +59,19 @@ const socialLinks = [
 const skills = [
   {
     category: "Languages",
-    items: ["TypeScript", "Swift", "Python", "Go"],
+    items: ["TypeScript", "Kotlin", "Java", "Swift", "Python", "Go"],
   },
   {
-    category: "Frameworks",
-    items: ["React", "Next.js", "Node.js", "SwiftUI"],
+    category: "Frameworks & Runtimes",
+    items: ["React", "Next.js", "Node.js", "Kotlin Multiplatform", "SwiftUI"],
+  },
+  {
+    category: "AI & Agents",
+    items: ["Claude Code", "Codex", "Cursor", "Windsurf", "MCP", "LSP"],
   },
   {
     category: "Tools",
-    items: ["Git", "Docker", "AWS", "GitHub Actions"],
+    items: ["Git", "Gradle", "Docker", "AWS", "GitHub Actions"],
   },
 ];
 
@@ -115,7 +119,7 @@ export default function AboutPage() {
         <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-6 uppercase tracking-wider">
           Skills
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {skills.map((skillGroup) => (
             <div key={skillGroup.category}>
               <h3 className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-3">
@@ -143,7 +147,13 @@ export default function AboutPage() {
         </h2>
         <ul className="space-y-3">
           <li className="text-zinc-600 dark:text-zinc-400">
-            Building ChessMatch — a chess puzzle game for iOS and Android
+            Released two mobile games in one month using AI agents —{" "}
+            <a href="https://zottware.com/chessmatch" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">ChessMatch</a>{" "}
+            and{" "}
+            <a href="https://zottware.com/rhythmmatch" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">RhythmMatch</a>
+          </li>
+          <li className="text-zinc-600 dark:text-zinc-400">
+            Building AI-powered developer tools and autonomous coding agents
           </li>
           <li className="text-zinc-600 dark:text-zinc-400">
             Working on developer tooling at scale

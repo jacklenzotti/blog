@@ -60,6 +60,14 @@ export default async function PostPage({ params }: Props) {
         >
           {formatDate(post.date)}
         </time>
+        {post.image && (
+          /* eslint-disable-next-line @next/next/no-img-element */
+          <img
+            src={post.image}
+            alt={post.title}
+            className="w-full rounded-lg mt-6"
+          />
+        )}
       </header>
 
       <div

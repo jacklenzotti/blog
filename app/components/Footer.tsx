@@ -31,13 +31,11 @@ const socialLinks = [
   },
 ];
 
-const footerLinks = [
+const footerLinks: { label: string; href: string; external?: boolean }[] = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
   { label: "About", href: "/about" },
-  { label: "ChessMatch", href: "/chessmatch" },
-  { label: "Hank", href: "/hank" },
-  { label: "Hank Dash", href: "/hank-dash" },
+  { label: "Zottware", href: "https://zottware.com", external: true },
   { label: "Privacy", href: "/privacy" },
   { label: "Support", href: "/support" },
 ];
@@ -52,15 +50,27 @@ export default function Footer() {
             <span className="text-sm font-medium text-zinc-900 dark:text-zinc-100 mb-1">
               Pages
             </span>
-            {footerLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {footerLinks.map((link) =>
+              link.external ? (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
           </div>
 
           {/* Social */}

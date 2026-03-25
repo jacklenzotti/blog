@@ -34,52 +34,85 @@ export default async function ProjectsPage() {
         Apps, tools, and open source work.
       </p>
 
-      {/* Featured Projects */}
+      {/* Games */}
       <section className="mb-16">
         <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-4 uppercase tracking-wider">
-          Featured
+          Games
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <ProjectCard
-            title="RhythmMatch"
-            description="A neon rhythm puzzle game"
-            href="/rhythmmatch"
-            image="rhythmmatch/feature.png"
-            tags={["iOS & Android", "Coming Soon"]}
-          />
+        <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-6 border border-zinc-200 dark:border-zinc-800 rounded-lg p-4">
+          Two mobile games. One month. Built with AI agents.{" "}
+          <a
+            href="https://zottware.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline"
+          >
+            Learn more at zottware.com &rarr;
+          </a>
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <ProjectCard
             title="ChessMatch"
-            description="A colorful chess puzzle game"
-            href="/chessmatch"
+            description="Chess strategy meets match-3 puzzling. 100 hand-designed levels."
+            href="https://zottware.com/chessmatch"
             image="chessmatch/feature.jpg"
-            tags={["iOS & Android", "Coming Soon"]}
+            tags={["iOS", "Android", "Steam"]}
+            external
           />
           <ProjectCard
-            title="Hank"
-            description="Autonomous AI coding agent for GitHub issues"
-            href="/hank"
-            tags={["CLI", "Open Source"]}
+            title="RhythmMatch"
+            description="Beat-synced match-3 with synthwave vibes."
+            href="https://zottware.com/rhythmmatch"
+            image="rhythmmatch/feature.png"
+            tags={["iOS", "Android"]}
+            external
           />
           <ProjectCard
-            title="Hank Dash"
-            description="Real-time monitoring dashboard for Hank agents"
-            href="/hank-dash"
-            tags={["Web App", "Open Source"]}
+            title="Up Next"
+            description="???"
+            image="crabs.png"
+            tags={["Coming Soon"]}
           />
         </div>
       </section>
 
-      {/* Highlighted Repos */}
+      {/* Open Source */}
       <section className="mb-16">
         <h2 className="text-sm font-medium text-zinc-500 dark:text-zinc-500 mb-4 uppercase tracking-wider">
           Open Source
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
+            title="Hank"
+            description="Autonomous AI coding agent for GitHub issues"
+            href="https://github.com/jacklenzotti/hank"
+            tags={["CLI", "Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="Hank Dash"
+            description="Real-time monitoring dashboard for Hank agents"
+            href="https://github.com/jacklenzotti/hank-dash"
+            tags={["Web App", "Open Source"]}
+            external
+          />
+          <ProjectCard
             title="ReelDeal"
-            description="Automated pipeline that converts Reddit stories into short-form vertical videos with AI voiceover for YouTube Shorts, TikTok, and Reels"
+            description="Automated pipeline that converts Reddit stories into short-form vertical videos with AI voiceover"
             href="https://github.com/jacklenzotti/ReelDeal"
-            tags={["Open Source"]}
+            tags={[
+              "Open Source",
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@zottware",
+                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
+              },
+              {
+                label: "TikTok",
+                href: "https://www.tiktok.com/@zottwaregames",
+                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>,
+              },
+            ]}
             external
           />
           <ProjectCard
@@ -94,6 +127,12 @@ export default async function ProjectsPage() {
             description="CLI pipeline for converting AI-generated images into game-ready 2D assets with sprite slicing, background removal, and atlas packing"
             href="https://github.com/jacklenzotti/picasso"
             tags={["Open Source"]}
+            previews={[
+              "picasso-examples/icon_castle.png",
+              "picasso-examples/icon_smite.png",
+              "picasso-examples/icon_enchant.png",
+              "picasso-examples/icon_hint.png",
+            ]}
             external
           />
         </div>
