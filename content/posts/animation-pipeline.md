@@ -1,7 +1,7 @@
 ---
 title: "Making Doodles Walk: Auto-Segmentation and Procedural Animation"
-date: "2026-03-24"
-excerpt: "Trying to make my doodles walk."
+date: "2026-03-25"
+excerpt: "Crab Rave"
 image: "/post-images/crab-cover.png"
 draft: false
 tags: ["gamedev", "animation", "ai", "pipeline", "indie"]
@@ -55,5 +55,7 @@ No skeletons, no pivot points. The animation is all procedural. It works because
 ## Where It Landed
 
 Our sprites go in, animated characters come out.  Ready to use in game.  Simpler creatures like clams, barnacles, and snakes still don't segemnt well and are avoided.
+
+[Obligatory](https://youtu.be/LDU_Txk06tM?si=tHyObz--7b_SVFtr&t=75)
 
 ![The crab, walking](/post-images/crab-rave.gif)

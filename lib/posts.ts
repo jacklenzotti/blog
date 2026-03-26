@@ -52,6 +52,17 @@ export function getAllSlugs(): string[] {
   return getPostFiles().map((f) => f.replace(/\.md$/, ""));
 }
 
+export function getAdjacentPosts(slug: string): { prev: PostMeta | null; next: PostMeta | null } {
+  const posts = getPublishedPostMeta(); // sorted newest first
+  const idx = posts.findIndex((p) => p.slug === slug);
+  if (idx === -1) return { prev: null, next: null };
+  // "next" = newer (toward index 0), "prev" = older (toward end)
+  return {
+    prev: idx < posts.length - 1 ? posts[idx + 1] : null,
+    next: idx > 0 ? posts[idx - 1] : null,
+  };
+}
+
 export function getPost(slug: string): Post | null {
   const filepath = path.join(POSTS_DIR, `${slug}.md`);
   if (!fs.existsSync(filepath)) return null;

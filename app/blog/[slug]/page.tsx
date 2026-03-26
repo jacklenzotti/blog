@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getAllSlugs, getPost } from "../../../lib/posts";
+import { getAllSlugs, getPost, getAdjacentPosts } from "../../../lib/posts";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -35,6 +35,7 @@ export default async function PostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) notFound();
+  const { prev, next } = getAdjacentPosts(slug);
 
   return (
     <div className="max-w-2xl mx-auto px-6 py-16">
@@ -74,6 +75,33 @@ export default async function PostPage({ params }: Props) {
         className="prose-content text-zinc-600 dark:text-zinc-400 leading-relaxed"
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
+
+      {(prev || next) && (
+        <nav className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex justify-between">
+          {prev ? (
+            <Link
+              href={`/blog/${prev.slug}`}
+              className="group text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors"
+            >
+              <span className="block text-xs mb-1">&larr; Previous</span>
+              <span className="group-hover:underline">{prev.title}</span>
+            </Link>
+          ) : (
+            <div />
+          )}
+          {next ? (
+            <Link
+              href={`/blog/${next.slug}`}
+              className="group text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors text-right"
+            >
+              <span className="block text-xs mb-1">Next &rarr;</span>
+              <span className="group-hover:underline">{next.title}</span>
+            </Link>
+          ) : (
+            <div />
+          )}
+        </nav>
+      )}
     </div>
   );
 }
