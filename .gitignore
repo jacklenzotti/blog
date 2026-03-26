@@ -39,9 +39,6 @@ yarn-error.log*
 # hank agent internals
 .hank/
 
-# hidden blog posts
-content/posts/animation-rigging-pipeline.md
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
