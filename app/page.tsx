@@ -246,6 +246,13 @@ export default async function Home() {
                 tags={["Open Source"]}
                 external
               />
+              <ProjectCard
+                title="PullPush MCP"
+                description="MCP server that gives AI assistants access to Reddit historical data via PullPush.io"
+                href="https://github.com/jacklenzotti/pullpush-mcp"
+                tags={["Open Source"]}
+                external
+              />
             </div>
           </div>
 

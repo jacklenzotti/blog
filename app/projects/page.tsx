@@ -114,6 +114,23 @@ export default async function ProjectsPage() {
             external
           />
           <ProjectCard
+            title="PullPush MCP"
+            description="MCP server that gives AI assistants access to Reddit historical data via PullPush.io. Search comments and submissions by subreddit, author, date, score, and keywords."
+            href="https://github.com/jacklenzotti/pullpush-mcp"
+            tags={[
+              "Open Source",
+              {
+                label: "npm",
+                href: "https://www.npmjs.com/package/pullpush-mcp",
+              },
+              {
+                label: "MCP Registry",
+                href: "https://mcp-registry.org/registry/io.github.jacklenzotti/pullpush-mcp",
+              },
+            ]}
+            external
+          />
+          <ProjectCard
             title="just-google-it"
             description="MCP server and CLI that gives AI coding agents web search so they can look up solutions when they get stuck"
             href="https://github.com/jacklenzotti/just-google-it"
