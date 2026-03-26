@@ -1,14 +1,14 @@
 ---
-title: "Making Doodles Walk: Auto-Segmentation and Rigging for 2D Sprites"
+title: "Making Doodles Walk: Auto-Segmentation and Procedural Animation"
 date: "2026-03-24"
 excerpt: "Trying to make my doodles walk."
-image: "/post-images/sam2-photo-example.png"
+image: "/post-images/crab-cover.png"
 draft: false
 tags: ["gamedev", "animation", "ai", "pipeline", "indie"]
 categories: ["devlog"]
 ---
 
-# Making Doodles Walk: Auto-Segmentation and Rigging for 2D Sprites
+# Making Doodles Walk: Auto-Segmentation and Procedural Animation
 
 After a few training cycles and fine-tuning, our LoRA is generating assets that look at home in our world.  The next problem, is learning to make them move.
 
@@ -44,16 +44,16 @@ The GUI lets me pull up each creature's masks, see what the classifier decided, 
 
 ![The labeling GUI after classification — body, claws, legs, eyes all labeled](/post-images/sam2-masks-labeled.png)
 
-## Rigging (Or Not)
+## Animation
 
-Traditional 2D rigging means skeletons, bones, pivot points. I looked at that path and decided I didn't want it.
+Traditional 2D animation means skeletons, bones, pivot points. I looked at that path and decided I didn't want it.
 
-Instead I skipped rigging entirely. The scene generator takes each labeled part and drops it into Godot as a Sprite2D node with an animation hint.  `walk_oscillate` for legs, `idle_sway` for tails, `blink` for eyes, `flap` for wings. A procedural animator reads those hints at runtime and applies sine based movement. Legs swing when the creature walks, tails sway on their own, eyes blink on a random timer.
+Instead the scene generator takes each labeled part and drops it into Godot as a Sprite2D node with an animation hint.  `walk_oscillate` for legs, `idle_sway` for tails, `blink` for eyes, `flap` for wings. A procedural animator reads those hints at runtime and applies sine based movement. Legs swing when the creature walks, tails sway on their own, eyes blink on a random timer.
 
 No skeletons, no pivot points. The animation is all procedural. It works because the art style is simple enough that a leg swinging from its top edge reads fine.
 
 ## Where It Landed
 
-Our sprites go in, animated characters come out.  Ready for use in game.  Simpler creatures like clams, barnacles, and snakes still don't segemnt well and are avoided.
+Our sprites go in, animated characters come out.  Ready to use in game.  Simpler creatures like clams, barnacles, and snakes still don't segemnt well and are avoided.
 
 ![The crab, walking](/post-images/crab-rave.gif)
