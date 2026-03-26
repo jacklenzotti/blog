@@ -33,7 +33,7 @@ export default function BlogPage() {
         <div className="space-y-8">
           {posts.map((post) => (
             <article key={post.slug}>
-              <Link href={`/blog/${post.slug}`} className="group block">
+              <Link href={`/posts/${post.slug}`} className="group block">
                 <div className="flex items-baseline justify-between gap-4 mb-1">
                   <h2 className="text-lg font-medium text-zinc-900 dark:text-zinc-100 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors">
                     {post.title}

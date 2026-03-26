@@ -8,7 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Projects", href: "/projects" },
-  { label: "Blog", href: "/blog" },
+  { label: "Blog", href: "/posts" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
   { label: "zottware", href: "https://zottware.com", external: true },

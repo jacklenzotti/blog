@@ -40,10 +40,10 @@ export default async function PostPage({ params }: Props) {
   return (
     <div className="max-w-2xl mx-auto px-6 py-16">
       <Link
-        href="/blog"
+        href="/posts"
         className="text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors mb-8 inline-flex items-center gap-1"
       >
-        &larr; Blog
+        &larr; Posts
       </Link>
 
       <header className="mt-6 mb-10">
@@ -80,7 +80,7 @@ export default async function PostPage({ params }: Props) {
         <nav className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-800 flex justify-between">
           {prev ? (
             <Link
-              href={`/blog/${prev.slug}`}
+              href={`/posts/${prev.slug}`}
               className="group text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors"
             >
               <span className="block text-xs mb-1">&larr; Previous</span>
@@ -91,7 +91,7 @@ export default async function PostPage({ params }: Props) {
           )}
           {next ? (
             <Link
-              href={`/blog/${next.slug}`}
+              href={`/posts/${next.slug}`}
               className="group text-sm text-zinc-400 dark:text-zinc-600 hover:text-zinc-600 dark:hover:text-zinc-400 transition-colors text-right"
             >
               <span className="block text-xs mb-1">Next &rarr;</span>

@@ -140,7 +140,7 @@ export default async function Home() {
               <div className="flex items-center justify-between w-full">
                 <h2 className="text-3xl font-semibold">Blog</h2>
                 <Link
-                  href="/blog"
+                  href="/posts"
                   className="text-sm text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
                 >
                   View all &rarr;
@@ -150,7 +150,7 @@ export default async function Home() {
                 {posts.slice(0, 3).map((post) => (
                   <Link
                     key={post.slug}
-                    href={`/blog/${post.slug}`}
+                    href={`/posts/${post.slug}`}
                     className="flex items-start gap-4 p-4 border border-zinc-200 dark:border-zinc-800 rounded-lg hover:border-zinc-400 dark:hover:border-zinc-600 transition-colors"
                   >
                     {post.image && (
