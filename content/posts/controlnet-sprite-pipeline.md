@@ -1,5 +1,5 @@
 ---
-title: "What Makes a Cow"
+title: "What Makes a Cow: ControlNet Sprite Pipeline"
 date: "2026-03-26"
 excerpt: "Probably having four legs."
 image: "/post-images/7legcow.png"
@@ -8,7 +8,7 @@ tags: ["stable-diffusion", "controlnet", "comfyui", "godot", "gamedev", "lora"]
 categories: ["devlog"]
 ---
 
-# What Makes a Cow
+# What Makes a Cow: ControlNet Sprite Pipeline
 
 Our LoRA has some winners.  It also thinks cows have five legs.  The style is holding across a wide variety of creatures and environments but the model has opinions about animal anatomy that don't match reality.
 
