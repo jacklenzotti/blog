@@ -185,6 +185,27 @@ export default async function Home() {
       {/* Section divider */}
       <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
 
+      {/* Zottware Callout */}
+      <section className="py-20">
+        <div className="flex flex-col items-center gap-4 p-8 max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-semibold">Zottware</h2>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            My main site for monetized content.
+          </p>
+          <a
+            href="https://zottware.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-5 py-2.5 border border-zinc-300 dark:border-zinc-700 rounded-lg hover:border-zinc-500 dark:hover:border-zinc-500 transition-colors text-zinc-900 dark:text-zinc-100"
+          >
+            zottware.com &rarr;
+          </a>
+        </div>
+      </section>
+
+      {/* Section divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-zinc-300 dark:via-zinc-700 to-transparent" />
+
       {/* Projects Section */}
       <section
         id="projects"

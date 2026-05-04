@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Blog", href: "/posts" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/#contact" },
-  { label: "zottware", href: "https://zottware.com", external: true },
+  { label: "Zottware", href: "https://zottware.com", external: true },
 ];
 
 export default function Navbar() {
