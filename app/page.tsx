@@ -308,7 +308,28 @@ export default async function Home() {
                 title="PullPush MCP"
                 description="MCP server that gives AI assistants access to Reddit historical data via PullPush.io"
                 href="https://github.com/jacklenzotti/pullpush-mcp"
-                tags={["Open Source"]}
+                tags={["MCP", "Open Source"]}
+                external
+              />
+              <ProjectCard
+                title="Cities: Skylines MCP"
+                description="MCP server and in-game bridge for AI-directed city building, cinematic tours, and timelapses"
+                href="https://github.com/jacklenzotti/cities-skylines-mcp"
+                tags={["MCP", "Open Source"]}
+                external
+              />
+              <ProjectCard
+                title="Clausewitz MCP"
+                description="MCP server for Paradox modding — EU5, EU4, Victoria 3, HOI4, CK3, Stellaris"
+                href="https://github.com/jacklenzotti/clausewitz-mcp"
+                tags={["MCP", "Open Source"]}
+                external
+              />
+              <ProjectCard
+                title="GTerm Director"
+                description="Machinima director for Garry&apos;s Mod over MCP — camera, actors, props, and recording"
+                href="https://github.com/jacklenzotti/gterm-director"
+                tags={["MCP", "Open Source"]}
                 external
               />
             </div>

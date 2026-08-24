@@ -157,6 +157,7 @@ export default async function ProjectsPage() {
             description="MCP server that gives AI assistants access to Reddit historical data via PullPush.io. Search comments and submissions by subreddit, author, date, score, and keywords."
             href="https://github.com/jacklenzotti/pullpush-mcp"
             tags={[
+              "MCP",
               "Open Source",
               {
                 label: "npm",
@@ -173,7 +174,28 @@ export default async function ProjectsPage() {
             title="just-google-it"
             description="MCP server and CLI that gives AI coding agents web search so they can look up solutions when they get stuck"
             href="https://github.com/jacklenzotti/just-google-it"
-            tags={["Open Source"]}
+            tags={["MCP", "Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="Cities: Skylines MCP"
+            description="MCP server and in-game bridge that lets AI tools drive Cities: Skylines — roads, zoning, cinematic tours, and timelapses."
+            href="https://github.com/jacklenzotti/cities-skylines-mcp"
+            tags={["MCP", "Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="Clausewitz MCP"
+            description="MCP server for Paradox modding — EU5, EU4, Victoria 3, HOI4, CK3, Stellaris. Grounds AI mod authoring in the game&apos;s own script docs instead of guesswork."
+            href="https://github.com/jacklenzotti/clausewitz-mcp"
+            tags={["MCP", "Open Source"]}
+            external
+          />
+          <ProjectCard
+            title="GTerm Director"
+            description="Machinima director for Garry&apos;s Mod over MCP. Around 44 scene tools for camera, actors, props, and recording. Fork of Earu/GTerm."
+            href="https://github.com/jacklenzotti/gterm-director"
+            tags={["MCP", "Open Source"]}
             external
           />
           <ProjectCard
