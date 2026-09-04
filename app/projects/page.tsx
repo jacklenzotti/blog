@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import ProjectCard from "../components/ProjectCard";
+import {
+  AppStoreIcon,
+  FacebookIcon,
+  GooglePlayIcon,
+  InstagramIcon,
+  SteamIcon,
+  YouTubeIcon,
+} from "../components/icons";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -52,17 +60,39 @@ export default async function ProjectsPage() {
           <ProjectCard
             title="ChessMatch"
             description="Chess strategy meets match-3 puzzling. 100 hand-designed levels."
-            href="https://zottware.com/chessmatch"
+            href="https://store.steampowered.com/app/4454830/ChessMatch/"
             image="chessmatch/feature.jpg"
-            tags={["iOS", "Android", "Steam"]}
+            tags={[
+              {
+                label: "Steam",
+                href: "https://store.steampowered.com/app/4454830/ChessMatch/",
+                icon: SteamIcon,
+              },
+              {
+                label: "App Store",
+                href: "https://apps.apple.com/us/app/chessmatch-match-3-game/id6758308749",
+                icon: AppStoreIcon,
+              },
+              {
+                label: "Google Play",
+                href: "https://play.google.com/store/apps/details?id=com.jacklenzotti.chessmatch&hl=en_US",
+                icon: GooglePlayIcon,
+              },
+            ]}
             external
           />
           <ProjectCard
             title="RhythmMatch"
             description="Beat-synced match-3 with synthwave vibes."
-            href="https://zottware.com/rhythmmatch"
+            href="https://play.google.com/store/apps/details?id=com.jacklenzotti.rhythmmatch&hl=en_US"
             image="rhythmmatch/feature.png"
-            tags={["iOS", "Android"]}
+            tags={[
+              {
+                label: "Google Play",
+                href: "https://play.google.com/store/apps/details?id=com.jacklenzotti.rhythmmatch&hl=en_US",
+                icon: GooglePlayIcon,
+              },
+            ]}
             external
           />
           <ProjectCard
@@ -83,29 +113,39 @@ export default async function ProjectsPage() {
           <ProjectCard
             title="Zottfiles"
             description="Wikipedia&apos;s strangest articles, code-animated into 60-second shorts. History, anomalies, oddities. Everything from Lake Nyos to Roopkund."
-            href="https://www.youtube.com/shorts/hHYw0B9P6KI"
+            href="https://www.instagram.com/zottfiles/"
             tags={[
               "Remotion",
               "Shorts",
               {
-                label: "Featured video",
+                label: "Instagram",
+                href: "https://www.instagram.com/zottfiles/",
+                icon: InstagramIcon,
+              },
+              {
+                label: "YouTube",
                 href: "https://www.youtube.com/shorts/hHYw0B9P6KI",
-                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
+                icon: YouTubeIcon,
               },
             ]}
             external
           />
           <ProjectCard
-            title="Zottware"
-            description="First-person black-hat retellings of historical hacks and exploit explainers. Narrated from the attacker&apos;s chair."
-            href="https://www.youtube.com/shorts/GxJd5fSxG2E"
+            title="Zottmaps"
+            description="Maps that tell the story. Geography, borders, and history animated into short-form video."
+            href="https://www.facebook.com/zottmaps/"
             tags={[
               "Remotion",
-              "Cybersecurity",
+              "Shorts",
               {
-                label: "Featured video",
-                href: "https://www.youtube.com/shorts/GxJd5fSxG2E",
-                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
+                label: "Facebook",
+                href: "https://www.facebook.com/zottmaps/",
+                icon: FacebookIcon,
+              },
+              {
+                label: "YouTube",
+                href: "https://www.youtube.com/@zottmaps",
+                icon: YouTubeIcon,
               },
             ]}
             external
@@ -137,19 +177,7 @@ export default async function ProjectsPage() {
             title="ReelDeal"
             description="Automated pipeline that converts Reddit stories into short-form vertical videos with AI voiceover"
             href="https://github.com/jacklenzotti/ReelDeal"
-            tags={[
-              "Open Source",
-              {
-                label: "YouTube",
-                href: "https://www.youtube.com/@zottware",
-                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
-              },
-              {
-                label: "TikTok",
-                href: "https://www.tiktok.com/@zottwaregames",
-                icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>,
-              },
-            ]}
+            tags={["Open Source"]}
             external
           />
           <ProjectCard

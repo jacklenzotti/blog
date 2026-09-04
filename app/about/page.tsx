@@ -148,9 +148,9 @@ export default function AboutPage() {
         <ul className="space-y-3">
           <li className="text-zinc-600 dark:text-zinc-400">
             Released two mobile games in one month using AI agents —{" "}
-            <a href="https://zottware.com/chessmatch" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">ChessMatch</a>{" "}
+            <a href="https://store.steampowered.com/app/4454830/ChessMatch/" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">ChessMatch</a>{" "}
             and{" "}
-            <a href="https://zottware.com/rhythmmatch" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">RhythmMatch</a>
+            <a href="https://play.google.com/store/apps/details?id=com.jacklenzotti.rhythmmatch&hl=en_US" target="_blank" rel="noopener noreferrer" className="text-zinc-900 dark:text-zinc-100 underline hover:no-underline">RhythmMatch</a>
           </li>
           <li className="text-zinc-600 dark:text-zinc-400">
             Building AI-powered developer tools and autonomous coding agents

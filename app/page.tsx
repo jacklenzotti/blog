@@ -1,5 +1,13 @@
 import Link from "next/link";
 import ProjectCard from "./components/ProjectCard";
+import {
+  AppStoreIcon,
+  FacebookIcon,
+  GooglePlayIcon,
+  InstagramIcon,
+  SteamIcon,
+  YouTubeIcon,
+} from "./components/icons";
 import { getPublishedPostMeta } from "../lib/posts";
 
 interface Repo {
@@ -231,17 +239,39 @@ export default async function Home() {
               <ProjectCard
                 title="ChessMatch"
                 description="Chess strategy meets match-3 puzzling. 100 hand-designed levels."
-                href="https://zottware.com/chessmatch"
+                href="https://store.steampowered.com/app/4454830/ChessMatch/"
                 image="chessmatch/feature.jpg"
-                tags={["iOS", "Android", "Steam"]}
+                tags={[
+                  {
+                    label: "Steam",
+                    href: "https://store.steampowered.com/app/4454830/ChessMatch/",
+                    icon: SteamIcon,
+                  },
+                  {
+                    label: "App Store",
+                    href: "https://apps.apple.com/us/app/chessmatch-match-3-game/id6758308749",
+                    icon: AppStoreIcon,
+                  },
+                  {
+                    label: "Google Play",
+                    href: "https://play.google.com/store/apps/details?id=com.jacklenzotti.chessmatch&hl=en_US",
+                    icon: GooglePlayIcon,
+                  },
+                ]}
                 external
               />
               <ProjectCard
                 title="RhythmMatch"
                 description="Beat-synced match-3 with synthwave vibes."
-                href="https://zottware.com/rhythmmatch"
+                href="https://play.google.com/store/apps/details?id=com.jacklenzotti.rhythmmatch&hl=en_US"
                 image="rhythmmatch/feature.png"
-                tags={["iOS", "Android"]}
+                tags={[
+                  {
+                    label: "Google Play",
+                    href: "https://play.google.com/store/apps/details?id=com.jacklenzotti.rhythmmatch&hl=en_US",
+                    icon: GooglePlayIcon,
+                  },
+                ]}
                 external
               />
             </div>
@@ -256,27 +286,37 @@ export default async function Home() {
               <ProjectCard
                 title="Zottfiles"
                 description="Wikipedia&apos;s strangest articles, code-animated into 60-second shorts."
-                href="https://www.youtube.com/shorts/hHYw0B9P6KI"
+                href="https://www.instagram.com/zottfiles/"
                 tags={[
                   "Remotion",
                   {
-                    label: "Featured video",
+                    label: "Instagram",
+                    href: "https://www.instagram.com/zottfiles/",
+                    icon: InstagramIcon,
+                  },
+                  {
+                    label: "YouTube",
                     href: "https://www.youtube.com/shorts/hHYw0B9P6KI",
-                    icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
+                    icon: YouTubeIcon,
                   },
                 ]}
                 external
               />
               <ProjectCard
-                title="Zottware"
-                description="First-person black-hat retellings of historical hacks and exploit explainers."
-                href="https://www.youtube.com/shorts/GxJd5fSxG2E"
+                title="Zottmaps"
+                description="Maps that tell the story — geography and history, animated."
+                href="https://www.facebook.com/zottmaps/"
                 tags={[
-                  "Cybersecurity",
+                  "Remotion",
                   {
-                    label: "Featured video",
-                    href: "https://www.youtube.com/shorts/GxJd5fSxG2E",
-                    icon: <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>,
+                    label: "Facebook",
+                    href: "https://www.facebook.com/zottmaps/",
+                    icon: FacebookIcon,
+                  },
+                  {
+                    label: "YouTube",
+                    href: "https://www.youtube.com/@zottmaps",
+                    icon: YouTubeIcon,
                   },
                 ]}
                 external
