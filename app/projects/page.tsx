@@ -56,7 +56,7 @@ export default async function ProjectsPage() {
             external
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <ProjectCard
             title="ChessMatch"
             description="Chess strategy meets match-3 puzzling. 100 hand-designed levels."
@@ -94,12 +94,6 @@ export default async function ProjectsPage() {
               },
             ]}
             external
-          />
-          <ProjectCard
-            title="Up Next"
-            description="???"
-            image="crabs.png"
-            tags={["Coming Soon"]}
           />
         </div>
       </section>
